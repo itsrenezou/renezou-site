@@ -1,0 +1,100 @@
+{
+  "_comment": "This file is the site's content layer. It is written by hand today and is structured to match the Notion database schema documented in /scripts/README-notion-sync.md — once that database exists, scripts/sync-notion.mjs overwrites this file automatically. Do not hand-edit 'body' once Notion sync is wired up.",
+  "essays": [
+    {
+      "id": "founder-read-this",
+      "order": 1,
+      "title": "If You're a Founder, Read This",
+      "category": "Entrepreneurship",
+      "status": "live",
+      "hasDraft": false,
+      "wordCountTarget": 1500,
+      "teaser": "Everyone wants to be a founder. But what actually makes you one? Being a founder isn't registering a company, building a product in stealth, or becoming your own boss. I think the answer lies somewhere between ownership, agency and legacy: what you choose to build, why it has to be yours, and what you hope remains when you're gone.",
+      "dek": "Everyone wants to be a founder. But what actually makes you one?",
+      "body": []
+    },
+    {
+      "id": "velocity-speed",
+      "order": 2,
+      "title": "Velocity > Speed",
+      "category": "Strategy",
+      "status": "live",
+      "hasDraft": true,
+      "wordCountTarget": 500,
+      "teaser": "“Move fast and break things” is passé. In a world where everyone can build faster, speed is no longer the advantage it once was. The founders who win won't just move fast – they'll move with velocity: speed with direction.",
+      "dek": "“Move fast and break things” is passé. In a world where everyone can build faster, speed is no longer the advantage it once was.",
+      "body": [
+        { "type": "p", "text": "In the past, Silicon Valley was built on one instruction: move fast and break things. During the dot-com boom, that instruction was radical because speed itself was the scarce resource — code took months to ship, teams took quarters to hire, distribution took years to build. Whoever moved fastest usually won." },
+        { "type": "h2", "text": "Speed Got Cheap" },
+        { "type": "p", "text": "That advantage is almost completely gone. AI has made speed cheap. What took a dot-com engineer six months now takes an AI-assisted founder a weekend. Every founder has access to the same instant infrastructure, the same code-generation tools, the same distribution channels. When everyone can move fast, speed alone stops being the edge." },
+        { "type": "pull", "text": "So what replaces it? Velocity — speed with direction. A company sprinting in the wrong direction just reaches the wrong destination sooner, and AI has only raised the speed at which founders can make expensive mistakes. Velocity equals speed × direction. When speed multiplies for free, direction becomes the only variable that still separates the founders who compound from the founders who just move." },
+        { "type": "h2", "text": "Direction Is a Question of Purpose" },
+        { "type": "p", "text": "Direction is really a question of purpose – not “how fast can we ship” but “why are we building this, and for whom.” That question used to get answered implicitly, over the months a slower build cycle forced founders to sit with a decision before executing it. AI removed that forced pause. Now founders have to build the pause back in deliberately, or they will ship their way into the wrong company faster than ever." },
+        { "type": "h2", "text": "Time Is Relative" },
+        { "type": "p", "text": "This is also a question of time horizon. Time is relative: an hour spent building the wrong thing costs a founder more than a week spent clarifying the right one, even though the calendar disagrees. Founders building for a decade and founders building for a fundraising cycle should not be making the same trade-offs, but at AI speed, it is easy to let the calendar make that decision instead of making it on purpose. Time is cheap to spend now. Making it count is not automatic — it is a choice." },
+        { "type": "p", "text": "That is the pause or intervention Eklipse exists to force. Three focused, one-month cycles — clarity × alignment × execution = strategic velocity." },
+        { "type": "h2", "text": "Strategic Leverage" },
+        { "type": "p", "text": "That choice is what separates founders who optimize for speed — more meetings, more hires, more launches, more fundraising — from founders who optimize for velocity: fewer, clearer decisions that compound. Strategic leverage comes from exactly that gap: generating disproportionately greater outcomes from the same founder time and attention, not from adding more of it." },
+        { "type": "p", "text": "Time has always been a finite resource, and every founder still has the same allocation of it. What has changed is that AI made the wrong use of that resource faster, not just the right one. The founders who win this decade will not be the ones who build fastest. They will be the ones who knew, before they started building, exactly what direction was worth that speed, and how to recruit people who are rowing in the same direction." }
+      ]
+    },
+    {
+      "id": "building-age-of-ai",
+      "order": 3,
+      "title": "Building in the Age of AI",
+      "category": "Building",
+      "status": "progress",
+      "hasDraft": false,
+      "wordCountTarget": 2000,
+      "teaser": "How do we build better in the age of AI? Storytelling is the oldest and newest technology.",
+      "dek": "How do we build better in the age of AI? Storytelling is the oldest and newest technology.",
+      "body": []
+    },
+    {
+      "id": "what-is-an-eklipse",
+      "order": 4,
+      "title": "What is an Eklipse?",
+      "category": "Strategy",
+      "status": "progress",
+      "hasDraft": true,
+      "wordCountTarget": 646,
+      "teaser": "Every company navigates through constant shifts in its market, technology, and macro environment. An Eklipse is the recurring moment of alignment — where a company steps back, refocuses, and re-emerges with clarity on who it is, how it communicates, and how it moves forward.",
+      "dek": "Every company navigates through constant shifts in its market, technology, and macro environment. An Eklipse is the recurring moment of alignment.",
+      "body": [
+        { "type": "p", "text": "Companies don't become misaligned once; they repeatedly drift out of alignment as their environment changes. An “Eklipse” is therefore a natural part of company-building, and its magnitude depends on how much has changed." },
+        { "type": "h2", "text": "Every Company Goes Through an Eklipse" },
+        { "type": "p", "text": "Companies don't always grow linearly: find product-market fit, raise capital, hire a team, scale. In reality, companies orbit through constant shifts in their markets, technologies, teams and macro environments. The company you built for one moment will not necessarily be the company you need for the next." },
+        { "type": "p", "text": "Over time, small inconsistencies begin to appear. The founder's vision evolves faster than the company narrative. The product changes while the positioning stays the same. New people join with different interpretations of the strategy. What the company says, what it believes and what it actually does slowly drift apart." },
+        { "type": "pull", "text": "We call the moment when a company steps back, refocuses and brings those pieces back into alignment an Eklipse." },
+        { "type": "h2", "text": "Eklipses Come in Different Magnitudes" },
+        { "type": "p", "text": "Not every Eklipse is a transformation. Most are partial. Companies naturally go through smaller Eklipses as they evolve: refreshing a narrative after learning more about customers, reconsidering priorities after a new competitor emerges, or clarifying responsibilities as a team grows. These are periodic corrections that keep identity, narrative and execution moving together." },
+        { "type": "p", "text": "But sometimes the underlying change is much larger. A company pivots its business model. A new funding round changes its ambitions. A new CEO takes over. The company enters a different market, launches a major product or fundamentally changes how it competes. At these inflection points, the old system may no longer adequately describe the new company. Complexity increases precisely when strategic coherence matters most." },
+        { "type": "p", "text": "These moments create something closer to a total Eklipse: a deeper realignment across three layers — Strategic Identity, Strategic Narrative and Strategic Activation. The company must know who it is, articulate who it is, and then ensure its decisions and actions reflect that new reality." },
+        { "type": "table", "headers": ["Cycle", "Theme", "Outcome", "Time"], "rows": [
+          ["1", "Strategic Identity", "Know who you are", "1 month"],
+          ["2", "Strategic Narrative", "Say who you are", "1 month"],
+          ["3", "Strategic Activation", "Act on who you are", "1 month"]
+        ]},
+        { "type": "h2", "text": "Some Eklipses Happen Naturally" },
+        { "type": "p", "text": "Good companies perform many of these corrections themselves. Founders rethink strategy. Leadership teams rewrite positioning. Boards pressure-test priorities. Teams adapt. But there is a point where being inside the system makes the system difficult to see." },
+        { "type": "p", "text": "At major inflection points, founders are simultaneously making decisions, communicating those decisions and managing their consequences. Different stakeholders carry different pieces of context. What feels obvious to the founder may be ambiguous to everyone else. Strategic leverage begins to diminish as complexity increases. That is when an outside perspective can become useful — not to replace founder judgment, but to help structure it." },
+        { "type": "h2", "text": "From Ambiguity to Velocity" },
+        { "type": "p", "text": "A structured Eklipse begins with an inflection point and a diagnosis: where has strategic coherence broken? From there, founder vision is translated into strategic choices, narrative, priorities and stakeholder alignment." },
+        { "type": "p", "text": "The process moves through three one-month cycles: Identity establishes who the company is; Narrative determines how that identity is communicated; and Activation translates it into an execution roadmap. The aim is not simply to produce three documents. It is to create a system in which those choices propagate through the organization, so fewer decisions need to continuously return to the founder." },
+        { "type": "p", "text": "The result is strategic leverage — and ultimately, greater organizational velocity. That reflects the broader principle behind Eklipse: clarity, alignment and execution multiply the impact of the resources a company already has. Every company will change. The question is whether it periodically realigns itself with what it has become." }
+      ]
+    },
+    {
+      "id": "capitals-and-ambitions",
+      "order": 5,
+      "title": "Capitals & Ambitions",
+      "category": "Capital",
+      "status": "progress",
+      "hasDraft": false,
+      "wordCountTarget": 3000,
+      "teaser": "Go where your ambition feels normal. Cities don't just attract ambitious people; they shape what we believe is possible. An exploration of how geography concentrates talent, capital, culture, and ambition — and why choosing where to build may be one of the most consequential decisions we make.",
+      "dek": "Go where your ambition feels normal — an exploration of how geography concentrates talent, capital, culture, and ambition.",
+      "body": []
+    }
+  ]
+}

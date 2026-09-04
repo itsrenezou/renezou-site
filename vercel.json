@@ -1,0 +1,6 @@
+{
+  "buildCommand": "node scripts/sync-notion.mjs",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
