@@ -42,9 +42,10 @@
     .then((data) => {
       const essays = data.essays.slice().sort((a, b) => a.order - b.order);
 
-      const countLine = document.getElementById("essay-count-line");
-      if (countLine) {
-        countLine.textContent = `Ideas on how capital, technology and people move — and what moves with them. ${essays.length} essays.`;
+      const countBadge = document.getElementById("essay-count-badge");
+      if (countBadge) {
+        const year = new Date().getFullYear();
+        countBadge.textContent = `${essays.length} ${essays.length === 1 ? "essay" : "essays"} · ${year}`;
       }
 
       // Featured: the essays that are live

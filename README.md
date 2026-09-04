@@ -125,4 +125,3 @@ That gets you: edit in Notion → live site updates within a couple of minutes, 
 - **"Work & Track Record"**: reachable by clicking "Eklipse" in the sidebar's Founder line (there's no separate
   top-level nav slot for it in your 3-section diagram, and this mirrors how Diana's site links her "Founder"
   line out to her product) — let me know if you'd rather it be a 4th nav item instead.
-

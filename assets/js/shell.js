@@ -22,6 +22,9 @@
     }).join("");
   }
 
+  // Small inline arrow icon used for outbound social/contact links.
+  const arrowIcon = `<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
   const substackForm = CFG.substackPublication
     ? `<form id="transit-form" action="https://${CFG.substackPublication}.substack.com/api/v1/free" method="post" target="_blank" rel="noopener">
          <input type="email" name="email" placeholder="you@company.com" aria-label="Email address" required />
@@ -41,7 +44,9 @@
       </div>
     </div>
 
-    <p class="bio">I write about how geography shapes the production, accumulation, and <strong>movement of capital</strong> in the AI era — and with <strong>Eklipse</strong>, I build on that thesis directly. Eklipse is strategic infrastructure for ambitious founders: it builds scalable systems that turn founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS — turning a love of <strong>deep tech</strong> into an investing lens of my own.</p>
+    <div class="bio-wrap">
+      <p class="bio">I write about how geography shapes the production, accumulation, and <strong>movement of capital</strong> in the AI era — and with <strong>Eklipse</strong>, I build on that thesis directly. Eklipse is strategic infrastructure for ambitious founders: it builds scalable systems that turn founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS — turning a love of <strong>deep tech</strong> into an investing lens of my own.</p>
+    </div>
 
     <nav class="primary-nav">${navHtml()}</nav>
 
@@ -54,16 +59,16 @@
     </div>
 
     <div class="social-row">
-      <a href="${CFG.eklipseUrl}" target="_blank" rel="noopener">Eklipse ↗</a>
-      <a href="${CFG.xUrl}" target="_blank" rel="noopener">X ↗</a>
-      <a href="${CFG.instagramUrl}" target="_blank" rel="noopener">Instagram ↗</a>
-      <a href="${CFG.linkedinUrl}" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:${CFG.email}">Email ↗</a>
+      <a href="${CFG.eklipseUrl}" target="_blank" rel="noopener"><span>Eklipse</span>${arrowIcon}</a>
+      <a href="${CFG.xUrl}" target="_blank" rel="noopener"><span>X</span>${arrowIcon}</a>
+      <a href="${CFG.instagramUrl}" target="_blank" rel="noopener"><span>Instagram</span>${arrowIcon}</a>
+      <a href="${CFG.linkedinUrl}" target="_blank" rel="noopener"><span>LinkedIn</span>${arrowIcon}</a>
+      <a href="mailto:${CFG.email}"><span>Email</span>${arrowIcon}</a>
     </div>
 
     <div class="newsletter">
       <div class="nl-title">IN TRANSIT</div>
-      <div class="nl-blurb">The ideas that move with capital, goods, and people — sent only when something's worth tracking.</div>
+      <div class="nl-blurb">The ideas that move with capital, people, and technology — sent only when it's worth tracking.</div>
       ${substackForm}
     </div>
 
@@ -75,6 +80,17 @@
 
   const mount = document.getElementById("sidebar-mount");
   if (mount) mount.innerHTML = sidebarHtml;
+
+  // Bio hover glow — tracks the cursor position over the bio paragraph
+  // and feeds it into the CSS radial-gradient via --mx/--my.
+  const bioWrap = document.querySelector(".bio-wrap");
+  if (bioWrap) {
+    bioWrap.addEventListener("mousemove", (e) => {
+      const rect = bioWrap.getBoundingClientRect();
+      bioWrap.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+      bioWrap.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    });
+  }
 
   // live clock
   function tick() {

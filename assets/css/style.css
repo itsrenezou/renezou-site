@@ -21,6 +21,10 @@
   --mint: #72f5af;
   --purple: #d7bbfb;
 
+  /* accent tint — forest at low opacity, used for chips + active states */
+  --accent-tint: rgba(47, 79, 63, 0.1);
+  --accent-glow: rgba(114, 245, 175, 0.32);
+
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
 
@@ -55,10 +59,15 @@ button {
 }
 
 .eyebrow {
+  display: inline-block;
   font-size: 11px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--forest);
+  background: var(--accent-tint);
+  padding: 4px 10px;
+  border-radius: 999px;
 }
 
 /* ---------- Shell: sidebar + main ---------- */
@@ -110,14 +119,37 @@ button {
 }
 
 .identity-lines .label {
-  color: var(--ink);
+  color: var(--forest);
   font-weight: 600;
   margin-right: 4px;
 }
 
 .identity-lines a:hover { color: var(--forest); }
 
+.bio-wrap {
+  position: relative;
+  border-radius: var(--radius);
+}
+.bio-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: var(--radius);
+  background: radial-gradient(
+    180px circle at var(--mx, 50%) var(--my, 50%),
+    var(--accent-glow),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.bio-wrap:hover::before { opacity: 1; }
+
 .bio {
+  position: relative;
+  z-index: 1;
   font-size: 13px;
   color: var(--muted);
   line-height: 1.65;
@@ -145,7 +177,7 @@ nav.primary-nav a {
 }
 
 nav.primary-nav a:hover { background: var(--surface); }
-nav.primary-nav a.active { background: var(--surface); color: var(--forest); }
+nav.primary-nav a.active { background: var(--accent-tint); color: var(--forest); }
 nav.primary-nav a .sub { font-size: 11px; color: var(--muted); font-weight: 400; }
 
 .meta-block {
@@ -184,12 +216,24 @@ nav.primary-nav a .sub { font-size: 11px; color: var(--muted); font-weight: 400;
 
 .social-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px 12px;
-  font-size: 12px;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12.5px;
 }
-.social-row a { color: var(--muted); }
-.social-row a:hover { color: var(--ink); }
+.social-row a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+}
+.social-row a:hover { color: var(--forest); }
+.social-row a:hover svg { transform: translate(1px, -1px); }
+.social-row svg {
+  flex: none;
+  width: 11px;
+  height: 11px;
+  transition: transform 0.15s ease;
+}
 
 .newsletter {
   border: 1px solid var(--border);
@@ -266,6 +310,18 @@ main {
 }
 
 .page-header { margin-bottom: 8px; }
+.page-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: var(--content-max);
+}
+.essay-count-badge {
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
 .page-title {
   font-family: var(--font-serif);
   font-size: 26px;
@@ -314,7 +370,8 @@ main {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--forest);
   margin-bottom: 12px;
 }
 .fb-grid {

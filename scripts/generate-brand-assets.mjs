@@ -8,21 +8,25 @@ import { mkdirSync } from "fs";
 const INK = "#17171a";
 const BG = "#fbfbf9";
 const LIVE = "#d6fd78";
+const SAGE = "#9caf88";
 
 mkdirSync("assets/img", { recursive: true });
 
-const monogramSvg = (size, bg = BG, ink = INK) => `
+// Monogram: pure wordmark — no container, ink serif "RZ" with a small
+// "live"-green accent dot. Transparent background. (Chosen from a set of
+// iterations — see monogram-iterations.png — as option "D — wordmark".)
+const monogramSvg = (size, ink = INK, accent = LIVE) => `
 <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="${bg}"/>
-  <text x="50" y="66" text-anchor="middle" font-family="DejaVu Serif, Georgia, serif" font-weight="700" font-size="46" fill="${ink}">RZ</text>
+  <text x="42" y="66" text-anchor="middle" font-family="DejaVu Serif, Georgia, serif" font-weight="700" font-size="48" fill="${ink}">RZ</text>
+  <circle cx="80" cy="34" r="4.2" fill="${accent}"/>
 </svg>`;
 
 const ogSvg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="${BG}"/>
   <rect x="0" y="0" width="1200" height="630" fill="none" stroke="#dcdad2" stroke-width="2"/>
-  <rect x="80" y="80" width="96" height="96" rx="18" fill="${INK}"/>
-  <text x="128" y="146" text-anchor="middle" font-family="DejaVu Serif, Georgia, serif" font-weight="700" font-size="44" fill="${BG}">RZ</text>
+  <text x="72" y="168" font-family="DejaVu Serif, Georgia, serif" font-weight="700" font-size="70" fill="${INK}">RZ</text>
+  <circle cx="182" cy="108" r="6" fill="${LIVE}"/>
   <text x="80" y="330" font-family="DejaVu Serif, Georgia, serif" font-weight="500" font-size="64" fill="${INK}">Rene Zou</text>
   <text x="80" y="380" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" fill="#5b5b58">Founder, Eklipse — systems for founders</text>
   <circle cx="84" cy="470" r="5" fill="${LIVE}"/>
