@@ -135,17 +135,19 @@ button {
   position: absolute;
   inset: -14px;
   border-radius: var(--radius);
+  /* --mx/--my are updated from a page-wide mousemove listener (see shell.js),
+     not just while hovering this element — the circle's own falloff (it goes
+     transparent past 70% of its radius) is what makes the glow fade in as the
+     cursor approaches from anywhere on the page and fade out as it leaves.
+     The off-screen fallback keeps it invisible before the first mousemove. */
   background: radial-gradient(
-    180px circle at var(--mx, 50%) var(--my, 50%),
+    220px circle at var(--mx, -9999px) var(--my, -9999px),
     var(--accent-glow),
     transparent 70%
   );
-  opacity: 0;
-  transition: opacity 0.3s ease;
   pointer-events: none;
   z-index: 0;
 }
-.bio-wrap:hover::before { opacity: 1; }
 
 .bio {
   position: relative;
