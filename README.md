@@ -125,3 +125,7 @@ That gets you: edit in Notion → live site updates within a couple of minutes, 
 - **"Work & Track Record"**: reachable by clicking "Eklipse" in the sidebar's Founder line (there's no separate
   top-level nav slot for it in your 3-section diagram, and this mirrors how Diana's site links her "Founder"
   line out to her product) — let me know if you'd rather it be a 4th nav item instead.
+Line 6: <title>Rene Zou — Writing, a working ledger</title> → a working column
+Line 13: <meta property="og:title" content="Rene Zou — Writing, a working ledger" /> → a working column
+Line 32: <h1 class="page-title">A working ledger</h1> → A working column
+<div class="nl-blurb">The ideas that move with capital, people, and technology — sent only when it's worth tracking.</div>
