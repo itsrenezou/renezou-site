@@ -23,7 +23,7 @@
 
   /* accent tint — forest at low opacity, used for chips + active states */
   --accent-tint: rgba(47, 79, 63, 0.1);
-  --accent-glow: rgba(114, 245, 175, 0.32);
+  --accent-glow: rgba(214, 253, 120, 0.4);
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
