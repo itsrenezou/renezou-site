@@ -81,11 +81,15 @@
   const mount = document.getElementById("sidebar-mount");
   if (mount) mount.innerHTML = sidebarHtml;
 
-  // Bio hover glow — tracks the cursor position over the bio paragraph
-  // and feeds it into the CSS radial-gradient via --mx/--my.
+  // Bio hover glow — tracks the cursor across the ENTIRE page (not just
+  // while it's directly over the sidebar), and projects that position onto
+  // the bio paragraph's own coordinate space via --mx/--my. The CSS radial
+  // gradient's falloff does the rest: the glow brightens as the cursor
+  // approaches the bio from anywhere on the page and fades as it moves away,
+  // instead of snapping on/off at the sidebar's edge.
   const bioWrap = document.querySelector(".bio-wrap");
   if (bioWrap) {
-    bioWrap.addEventListener("mousemove", (e) => {
+    document.addEventListener("mousemove", (e) => {
       const rect = bioWrap.getBoundingClientRect();
       bioWrap.style.setProperty("--mx", `${e.clientX - rect.left}px`);
       bioWrap.style.setProperty("--my", `${e.clientY - rect.top}px`);
