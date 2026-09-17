@@ -5,7 +5,8 @@
 // ---------------------------------------------------------------
 (function () {
   const CFG = window.SITE_CONFIG;
-  const path = location.pathname.split("/").pop() || "index.html";
+  let path = location.pathname.split("/").pop() || "index.html";
+  if (path === "writing") path = "index.html"; // /writing serves a copy of index.html
 
   const NAV = [
     { href: "index.html", label: "Writing", sub: "5" },
