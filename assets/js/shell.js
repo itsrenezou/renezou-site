@@ -33,9 +33,9 @@
   const beehiivFormMount = `<div id="beehiiv-form-mount"></div>`;
 
   const sidebarHtml = `
-    <img class="avatar" src="assets/img/avatar.jpg" alt="${CFG.name}" />
-    <div>
-      <div class="identity-name">${CFG.name}</div>
+    <div class="identity-name">${CFG.name}</div>
+    <div class="identity-row">
+      <img class="avatar" src="assets/img/avatar.jpg" alt="${CFG.name}" />
       <div class="identity-lines">
         <div><span class="label">Founder</span><a class="underline-link" href="work.html">Eklipse</a> · systems for founders</div>
         <div><span class="label">Category</span>strategic infrastructure</div>
