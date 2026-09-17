@@ -1,6 +1,9 @@
 {
-  "buildCommand": "node scripts/sync-notion.mjs",
+  "buildCommand": "node scripts/sync-notion.mjs && node scripts/generate-sitemap.mjs",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/writing", "destination": "/index.html" }
+  ]
 }

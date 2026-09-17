@@ -35,9 +35,19 @@
         return;
       }
 
-      document.title = `${essay.title} — Rene Zou`;
-      document.getElementById("doc-title").textContent = `${essay.title} — Rene Zou`;
-      document.getElementById("meta-desc").setAttribute("content", essay.dek || essay.teaser);
+      const canonicalUrl = `https://renezou.com/essay?id=${essay.id}`;
+      const shareTitle = `${essay.title} — Rene Zou`;
+      const shareDesc = essay.dek || essay.teaser;
+
+      document.title = shareTitle;
+      document.getElementById("doc-title").textContent = shareTitle;
+      document.getElementById("meta-desc").setAttribute("content", shareDesc);
+      document.getElementById("canonical-link").setAttribute("href", canonicalUrl);
+      document.getElementById("og-title").setAttribute("content", shareTitle);
+      document.getElementById("og-desc").setAttribute("content", shareDesc);
+      document.getElementById("og-url").setAttribute("content", canonicalUrl);
+      document.getElementById("twitter-title").setAttribute("content", shareTitle);
+      document.getElementById("twitter-desc").setAttribute("content", shareDesc);
       document.getElementById("crumb-category").textContent = essay.category;
       document.getElementById("essay-category").textContent = essay.category;
       document.getElementById("essay-title").textContent = essay.title;
