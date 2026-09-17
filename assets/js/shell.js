@@ -26,13 +26,11 @@
   // Small inline arrow icon used for outbound social/contact links.
   const arrowIcon = `<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-  const substackForm = CFG.substackPublication
-    ? `<form id="transit-form" action="https://${CFG.substackPublication}.substack.com/api/v1/free" method="post" target="_blank" rel="noopener">
-         <input type="email" name="email" placeholder="you@company.com" aria-label="Email address" required />
-         <button type="submit">Send it →</button>
-       </form>
-       <div class="nl-note">Delivered via Substack.</div>`
-    : `<div class="nl-note">Signup opens once the Substack publication is live.</div>`;
+  // beehiiv embed: the loader script below mounts the actual subscribe
+  // widget into #beehiiv-form-mount once it loads. It's appended as a real
+  // <script> element (not via innerHTML, which never executes scripts) in
+  // the block right after sidebarHtml is mounted, further down this file.
+  const beehiivFormMount = `<div id="beehiiv-form-mount"></div>`;
 
   const sidebarHtml = `
     <img class="avatar" src="assets/img/avatar.jpg" alt="${CFG.name}" />
@@ -69,8 +67,8 @@
 
     <div class="newsletter">
       <div class="nl-title">IN TRANSIT</div>
-      <div class="nl-blurb">The ideas that move with capital, people, and technology — sent only when it's worth tracking.</div>
-      ${substackForm}
+      <div class="nl-blurb">The ideas that move with people, capital and technology — sent only when it's worth tracking.</div>
+      ${beehiivFormMount}
     </div>
 
     <button class="cmdk-trigger" id="cmdk-open" type="button">
@@ -81,6 +79,18 @@
 
   const mount = document.getElementById("sidebar-mount");
   if (mount) mount.innerHTML = sidebarHtml;
+
+  // Mount the beehiiv subscribe form for real. innerHTML never executes
+  // <script> tags, so the loader is appended here as an actual script
+  // element instead of being baked into the sidebarHtml template above.
+  const beehiivMount = document.getElementById("beehiiv-form-mount");
+  if (beehiivMount) {
+    const beehiivScript = document.createElement("script");
+    beehiivScript.async = true;
+    beehiivScript.src = "https://subscribe-forms.beehiiv.com/v3/loader.js";
+    beehiivScript.setAttribute("data-beehiiv-form", "1161d933-2b20-4b40-b406-ce3e7911f095");
+    beehiivMount.appendChild(beehiivScript);
+  }
 
   // Bio hover glow — tracks the cursor across the ENTIRE page (not just
   // while it's directly over the sidebar), and projects that position onto

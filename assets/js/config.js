@@ -10,10 +10,6 @@ window.SITE_CONFIG = {
   linkedinUrl: "https://www.linkedin.com/in/renezou/",
   xUrl: "https://x.com/itsrenezou",
 
-  // Substack — the custom "IN TRANSIT" form below posts directly to
-  // Substack's subscribe endpoint for this publication (no embed iframe).
-  substackPublication: "dearcityrene", // dearcityrene.substack.com
-
   // Based / orbit / grown — shown in the sidebar
   basedCity: "New York, New York",
   basedTimezone: "America/New_York",
