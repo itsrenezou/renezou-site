@@ -100,14 +100,52 @@
   // gradient's falloff does the rest: the glow brightens as the cursor
   // approaches the bio from anywhere on the page and fades as it moves away,
   // instead of snapping on/off at the sidebar's edge.
+  // The page-wide spotlight layer. It sits behind all content (see
+  // .cursor-spotlight in style.css) and is driven by the same mousemove
+  // listener as the bio glow below.
+  const spotlight = document.createElement("div");
+  spotlight.className = "cursor-spotlight";
+  document.body.appendChild(spotlight);
+
   const bioWrap = document.querySelector(".bio-wrap");
-  if (bioWrap) {
-    document.addEventListener("mousemove", (e) => {
-      const rect = bioWrap.getBoundingClientRect();
-      bioWrap.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-      bioWrap.style.setProperty("--my", `${e.clientY - rect.top}px`);
+
+  // One listener drives both effects, and the actual style writes are
+  // deferred to the next animation frame so fast cursor movement can't queue
+  // up more layout work than the browser can paint.
+  let pending = null;
+  let frame = 0;
+  document.addEventListener("mousemove", (e) => {
+    pending = { x: e.clientX, y: e.clientY };
+    if (frame) return; // a frame is already queued; it will read the latest position
+    frame = requestAnimationFrame(() => {
+      frame = 0;
+      if (!pending) return;
+      const { x, y } = pending;
+
+      // Ambient spotlight: viewport coordinates, so it tracks everywhere.
+      document.documentElement.style.setProperty("--sx", `${x}px`);
+      document.documentElement.style.setProperty("--sy", `${y}px`);
+      if (!document.body.classList.contains("spotlight-active")) {
+        document.body.classList.add("spotlight-active");
+      }
+
+      // Bio glow: the same position projected into the bio's own coordinate
+      // space, so its tighter, brighter circle still lands correctly.
+      if (bioWrap) {
+        const rect = bioWrap.getBoundingClientRect();
+        bioWrap.style.setProperty("--mx", `${x - rect.left}px`);
+        bioWrap.style.setProperty("--my", `${y - rect.top}px`);
+      }
     });
-  }
+  });
+
+  // Fade the spotlight out when the cursor leaves the window entirely.
+  document.addEventListener("mouseleave", () => {
+    document.body.classList.remove("spotlight-active");
+  });
+  document.addEventListener("mouseenter", () => {
+    document.body.classList.add("spotlight-active");
+  });
 
   // live clock
   function tick() {
