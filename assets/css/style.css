@@ -915,3 +915,12 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   gap: 10px;
   margin-left: auto;
 }
+
+/* Framed white card on article hover. Padding drops by 1px to offset the
+   border so the row doesn't shift when it appears. */
+.essay-list a.essay-card:hover {
+  border: 1px solid rgba(220, 218, 210, 0.75);
+  padding: 17px 15px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(23, 23, 26, 0.045);
+}
