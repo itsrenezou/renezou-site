@@ -714,3 +714,47 @@ main {
   .fb-grid { grid-template-columns: 1fr; }
   .essay-title { font-size: 26px; }
 }
+
+/* ===== Cursor spotlight + sidebar scrollbar ===== */
+:root {
+  --spotlight: rgba(214, 253, 120, 0.26);
+  --scroll-thumb: rgba(47, 79, 63, 0.28);
+}
+
+.shell { position: relative; z-index: 1; }
+
+.cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  background: radial-gradient(
+    320px circle at var(--sx, -9999px) var(--sy, -9999px),
+    var(--spotlight),
+    transparent 72%
+  );
+}
+
+body.spotlight-active .cursor-spotlight { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-spotlight { display: none; }
+}
+
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 250ms ease;
+}
+.sidebar:hover { scrollbar-color: var(--scroll-thumb) transparent; }
+
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 99px;
+  transition: background 250ms ease;
+}
+.sidebar:hover::-webkit-scrollbar-thumb { background: var(--scroll-thumb); }
