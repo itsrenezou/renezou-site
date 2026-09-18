@@ -978,3 +978,18 @@ nav.primary-nav a.active:hover {
   border-color: transparent;
   box-shadow: none;
 }
+
+/* Nav rows get the same white card on hover as the links list. Padding drops
+   1px to offset the border so rows don't shift. The active row keeps its green
+   tint even while hovered, so it stays identifiable as the current page. */
+nav.primary-nav a:hover {
+  background: var(--hover-card);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(23, 23, 26, 0.05);
+  padding: 6px 7px;
+}
+nav.primary-nav a.active:hover {
+  background: var(--accent-tint);
+  border-color: transparent;
+  box-shadow: none;
+}
