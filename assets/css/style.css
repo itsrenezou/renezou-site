@@ -758,3 +758,12 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   transition: background 250ms ease;
 }
 .sidebar:hover::-webkit-scrollbar-thumb { background: var(--scroll-thumb); }
+
+/* Serif italic accent phrase in page ledes */
+.lede em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1em;
+  letter-spacing: 0.005em;
+  color: var(--forest);
+}
