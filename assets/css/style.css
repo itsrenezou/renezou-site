@@ -1004,3 +1004,19 @@ nav.primary-nav a.active:hover {
   white-space: nowrap;
   letter-spacing: 0.01em;
 }
+
+/* =========================================================
+   Layout proportions
+   The reference site is full-bleed: its sidebar sits flush against the
+   window edge at ~22% of viewport width, and the content column runs on
+   to a wide right margin. Ours was a 1180px box centred in the window,
+   which compressed both columns and left large empty margins either side.
+   ========================================================= */
+.shell { max-width: 1600px; }
+
+main { padding: 56px 64px 120px; }
+
+:root { --content-max: 880px; }
+
+/* Article titles up a step now that the column is wider. */
+.essay-card h3 { font-size: 18px; }
