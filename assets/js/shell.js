@@ -71,6 +71,7 @@
       <div class="nl-title">IN TRANSIT</div>
       <div class="nl-blurb">The ideas that move with ambitious people, capital, and technology — sent only when it's worth tracking.</div>
       ${beehiivFormMount}
+      <div class="nl-thesis">Things move, but where they concentrate matters.</div>
     </div>
 
     <button class="cmdk-trigger" id="cmdk-open" type="button">

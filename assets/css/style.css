@@ -767,3 +767,151 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   letter-spacing: 0.005em;
   color: var(--forest);
 }
+
+/* =========================================================
+   Diana-reference design pass
+   ========================================================= */
+
+:root {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --hover-card: #ffffff;
+}
+
+/* --- Thesis line under the signup form --- */
+.nl-thesis {
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* --- Expandable search button, in the page header row --- */
+.search-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  flex: none;
+  width: auto;
+  max-width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  transition: max-width 320ms cubic-bezier(.22,.61,.36,1), background 200ms ease, border-color 200ms ease;
+}
+.search-toggle .search-icon {
+  width: 32px;
+  flex: none;
+  display: grid;
+  place-items: center;
+}
+.search-toggle .search-icon svg { width: 14px; height: 14px; }
+.search-toggle .search-label {
+  font-size: 12.5px;
+  padding-right: 8px;
+  opacity: 0;
+  transition: opacity 180ms ease 60ms;
+}
+.search-toggle kbd {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-right: 10px;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 180ms ease 60ms;
+}
+.search-toggle:hover,
+.search-toggle:focus-visible {
+  max-width: 260px;
+  background: var(--hover-card);
+  border-color: var(--forest);
+  color: var(--forest);
+}
+.search-toggle:hover .search-label,
+.search-toggle:focus-visible .search-label,
+.search-toggle:hover kbd,
+.search-toggle:focus-visible kbd { opacity: 1; }
+
+.page-header-top { gap: 10px; }
+
+/* --- Links: mono, arrow hard right, white box on hover --- */
+.social-row { gap: 1px; }
+.social-row a {
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 9px 10px;
+  margin: 0 -10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.social-row a:hover {
+  background: var(--hover-card);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(23,23,26,0.05);
+  color: var(--ink);
+}
+.social-row a:hover svg { color: var(--forest); }
+
+/* --- Meta block: mono, wider key column, roomier rows --- */
+.meta-block { font-family: var(--font-mono); font-size: 12px; gap: 11px; }
+.meta-row { gap: 12px; }
+.meta-row .k { width: 58px; }
+.building-badge { font-family: var(--font-mono); font-size: 12px; }
+
+/* --- Essay list: index line, white hover box, closing note --- */
+.list-index {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  max-width: var(--content-max);
+  margin: 26px 0 2px;
+  color: var(--muted);
+}
+.list-index .li-year { color: var(--forest); font-weight: 600; }
+.list-index .li-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.list-index .li-count { color: var(--muted); }
+
+.essay-list a.essay-card:hover {
+  background: var(--hover-card);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 3px rgba(23,23,26,0.06);
+  margin: 0 -12px;
+  padding: 18px 16px;
+}
+
+.list-outro {
+  max-width: var(--content-max);
+  margin: 26px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.page-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}

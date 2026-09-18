@@ -73,14 +73,31 @@
       const filtersEl = document.getElementById("filters");
       let active = "All";
 
+      // The index line above the list — year, label, rule, and a count that
+      // tracks the active filter rather than the full archive.
+      function renderIndexLine(count) {
+        const el = document.getElementById("list-index");
+        if (!el) return;
+        el.innerHTML = `
+          <span class="li-year">${new Date().getFullYear()}</span>
+          <span class="li-label">· current issues</span>
+          <span class="li-rule"></span>
+          <span class="li-count">${count}</span>
+        `;
+      }
+
       function renderList() {
         const list = document.getElementById("essay-list");
+        const outro = document.getElementById("list-outro");
         const filtered = active === "All" ? essays : essays.filter((e) => e.category === active);
+        renderIndexLine(filtered.length);
         if (!filtered.length) {
           list.innerHTML = `<p style="color:var(--muted); font-size:13.5px; padding:24px 4px; border-top:1px solid var(--border);">No essays in “${active}” yet.</p>`;
+          if (outro) outro.hidden = true;
           return;
         }
         list.innerHTML = filtered.map(essayCard).join("");
+        if (outro) outro.hidden = false;
       }
 
       function renderFilters() {
