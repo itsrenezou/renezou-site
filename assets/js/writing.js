@@ -22,11 +22,18 @@
     return `<span class="tag status-${status === "live" ? "live" : "progress"}">${STATUS_LABEL[status]}</span>`;
   }
 
+  function essayMeta(e) {
+    const bits = [e.type, e.date].filter(Boolean);
+    if (!bits.length) return "";
+    return `<span class="essay-meta">${bits.join(" \u00b7 ")}</span>`;
+  }
+
   function essayCard(e) {
     const inner = `
       <div class="essay-card-top">
         ${statusTag(e.status)}
         <span class="tag category">${e.category}</span>
+        ${essayMeta(e)}
       </div>
       <h3>${e.title}</h3>
       <p>${e.teaser}</p>
