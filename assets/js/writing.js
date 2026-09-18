@@ -47,7 +47,13 @@
   fetch("content/essays.json")
     .then((r) => r.json())
     .then((data) => {
-      const essays = data.essays.slice().sort((a, b) => a.order - b.order);
+      // Newest first by date. Dates are month-precision (YYYY-MM), so string
+      // comparison sorts correctly, and 'order' breaks ties within a month.
+      // Entries with no date fall to the bottom rather than the top.
+      const essays = data.essays.slice().sort((a, b) => {
+        const byDate = (b.date || "").localeCompare(a.date || "");
+        return byDate !== 0 ? byDate : a.order - b.order;
+      });
 
       const countBadge = document.getElementById("essay-count-badge");
       if (countBadge) {
