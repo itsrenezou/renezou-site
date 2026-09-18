@@ -928,3 +928,38 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 /* Count badge and search label in mono, matching the meta block. */
 .essay-count-badge { font-family: var(--font-mono); font-size: 11.5px; }
 .search-toggle .search-label { font-family: var(--font-mono); font-size: 11.5px; }
+
+/* Profile intro lines in mono, matching the meta block. Mono runs wider than
+   Inter, so the size steps down to keep the lines inside the sidebar. */
+.identity-lines {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.55;
+  gap: 7px;
+}
+
+/* IBM Plex Mono for all metadata — profile intro, meta block, links, count
+   badge, search label. Loaded via the existing Google Fonts request in each
+   page's head; the system stack stays as the fallback. */
+:root {
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* JetBrains Mono for all metadata — profile intro, meta block, links, count
+   badge, search label. Folded into the Google Fonts request already in each
+   page head; the system mono stack stays as the fallback. */
+:root {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Profile intro lines in mono, sized to hold two lines in the 320px column. */
+.identity-lines {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.55;
+  gap: 7px;
+}
+
+/* Meta block down from 12px to match the profile intro. */
+.meta-block,
+.building-badge { font-size: 11.5px; }
