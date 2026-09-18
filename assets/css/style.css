@@ -924,3 +924,7 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   border-radius: 14px;
   box-shadow: 0 2px 10px rgba(23, 23, 26, 0.045);
 }
+
+/* Count badge and search label in mono, matching the meta block. */
+.essay-count-badge { font-family: var(--font-mono); font-size: 11.5px; }
+.search-toggle .search-label { font-family: var(--font-mono); font-size: 11.5px; }
