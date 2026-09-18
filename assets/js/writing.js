@@ -16,7 +16,7 @@
     "Archives",
   ];
 
-  const STATUS_LABEL = { live: "live", progress: "in progress" };
+  const STATUS_LABEL = { live: "pinned", progress: "live" };
 
   function statusTag(status) {
     return `<span class="tag status-${status === "live" ? "live" : "progress"}">${STATUS_LABEL[status]}</span>`;

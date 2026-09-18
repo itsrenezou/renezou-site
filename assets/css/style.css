@@ -481,7 +481,7 @@ main {
 }
 .essay-card.locked { opacity: 0.72; cursor: default; }
 .essay-card.locked h3::after {
-  content: "not yet published";
+  content: "coming soon";
   display: inline-block;
   margin-left: 8px;
   font-size: 10.5px;
