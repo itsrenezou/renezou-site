@@ -29,6 +29,8 @@
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
 
   --sidebar-w: 320px;
+  --avatar-size: 58px;
+  --identity-gap: 14px;
   --content-max: 700px;
   --gap: 24px;
   --radius: 10px;
@@ -96,22 +98,33 @@ button {
 
 .sidebar::-webkit-scrollbar { width: 0; }
 
+/* Name + avatar/lines are one block so the sidebar's 26px flex gap doesn't
+   open up between them. The name is indented by the avatar column width
+   (--avatar-size + --identity-gap) so it sits directly above "Founder",
+   matching the reference layout. */
+.identity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .identity-name {
   font-family: var(--font-serif);
   font-size: 19px;
   font-weight: 600;
-  margin: 0 0 14px;
+  margin: 0;
+  padding-left: calc(var(--avatar-size) + var(--identity-gap));
 }
 
 .identity-row {
   display: flex;
-  gap: 14px;
+  gap: var(--identity-gap);
   align-items: flex-start;
 }
 
 .avatar {
-  width: 58px;
-  height: 58px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
   border-radius: var(--radius-sm);
   object-fit: cover;
   border: 1px solid var(--border);
