@@ -1100,3 +1100,71 @@ em.accent {
   letter-spacing: 0.005em;
   color: var(--forest);
 }
+
+/* Cycle table in "What is an Eklipse?": a narrow number column, equal
+   columns for theme and outcome so "Know who you are" stays on one line,
+   and the numbers, headers and durations in mono like the rest of the
+   site's metadata. On phones the rows stack instead of squeezing. */
+.essay-body .stat-table {
+  border-radius: 12px;
+cd ~/Desktop/renezou-site
+
+cat >> assets/css/style.css <<'CSSEOF'
+
+/* Cycle table in "What is an Eklipse?": a narrow number column, equal
+   columns for theme and outcome so "Know who you are" stays on one line,
+   and the numbers, headers and durations in mono like the rest of the
+   site's metadata. On phones the rows stack instead of squeezing. */
+.essay-body .stat-table {
+  border-radius: 12px;
+  margin: 28px 0;
+  background: var(--bg);
+}
+.essay-body .stat-row {
+  grid-template-columns: 3.5rem minmax(0, 1.25fr) minmax(0, 1.25fr) 5.5rem;
+  column-gap: 20px;
+  align-items: baseline;
+  padding: 15px 20px;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+.essay-body .stat-row:first-child {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  padding-block: 11px;
+}
+.essay-body .stat-row:not(:first-child) > div:nth-child(1) {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--forest);
+}
+.essay-body .stat-row:not(:first-child) > div:nth-child(2) { font-weight: 500; color: var(--ink); }
+.essay-body .stat-row:not(:first-child) > div:nth-child(3) {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--forest);
+}
+.essay-body .stat-row > div:nth-child(4) { white-space: nowrap; text-align: right; }
+.essay-body .stat-row:not(:first-child) > div:nth-child(4) {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .essay-body .stat-row:first-child { display: none; }
+  .essay-body .stat-row:nth-child(2) { border-top: none; }
+  .essay-body .stat-row {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "num theme" "num outcome" "num time";
+    row-gap: 2px;
+    padding: 14px 16px;
+  }
+  .essay-body .stat-row > div:nth-child(1) { grid-area: num; }
+  .essay-body .stat-row > div:nth-child(2) { grid-area: theme; }
+  .essay-body .stat-row > div:nth-child(3) { grid-area: outcome; }
+  .essay-body .stat-row > div:nth-child(4) { grid-area: time; text-align: left; }
+}
