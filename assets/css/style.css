@@ -1007,3 +1007,30 @@ nav.primary-nav a.active:hover {
 
 /* Article titles up a step. */
 .essay-card h3 { font-size: 18px; }
+
+/* Chevron in a left gutter beside each article title, in the site mono.
+   Entry content is indented 40px so the chevrons form their own column.
+   On hover (published entries only) the chevron darkens to the title
+   colour and nudges right; hover padding is 40 + 12 margin - 1 border. */
+.essay-card { padding-left: 40px; }
+.essay-list a.essay-card:hover { padding-left: 51px; }
+.essay-card h3 { position: relative; }
+.title-chevron {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  color: #8a8a85;
+  transition: color 180ms ease, transform 180ms ease;
+}
+.essay-list a.essay-card:hover .title-chevron {
+  color: var(--ink);
+  transform: translate(2px, -50%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-chevron { transition: none; }
+}

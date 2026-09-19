@@ -35,7 +35,7 @@
         <span class="tag category">${e.category}</span>
         ${essayMeta(e)}
       </div>
-      <h3>${e.title}</h3>
+      <h3><span class="title-chevron" aria-hidden="true">&gt;</span>${e.title}</h3>
       <p>${e.teaser}</p>
     `;
     if (e.hasDraft) {
