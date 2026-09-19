@@ -1034,3 +1034,43 @@ nav.primary-nav a.active:hover {
 @media (prefers-reduced-motion: reduce) {
   .title-chevron { transition: none; }
 }
+
+/* Work page closing note: a divider in place of the heading, then the
+   paragraph set larger in the serif, and the inbox link styled like the
+   sidebar's "Currently building" line (lime dot, mono, thin underline). */
+.work-block.closing {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.work-block.closing p {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+.work-block.cta { margin-top: -6px; }
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.cta-link::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--live);
+  box-shadow: 0 0 0 3px rgba(214, 253, 120, 0.35);
+}
+.cta-link .cta-text {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 180ms ease;
+}
+.cta-link:hover .cta-text { border-color: var(--ink); }
