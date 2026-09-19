@@ -1074,3 +1074,29 @@ nav.primary-nav a.active:hover {
   transition: border-color 180ms ease;
 }
 .cta-link:hover .cta-text { border-color: var(--ink); }
+
+/* Stack page loop: each circle lights up as the travelling pulse reaches
+   it. The pulse takes 6s per lap and the nodes sit a third of a lap apart,
+   so their animations are offset by 2s each. */
+.loop-node { animation: loop-light 6s ease-in-out infinite; }
+.loop-node.n-ideas     { animation-delay: 0s; }
+.loop-node.n-companies { animation-delay: 2s; }
+.loop-node.n-capital   { animation-delay: 4s; }
+@keyframes loop-light {
+  0%, 22%, 100% { fill-opacity: 0.38; stroke-width: 1.4; }
+  6%            { fill-opacity: 0.78; stroke-width: 2.4; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loop-node { animation: none; }
+  .loop-pulse { display: none; }
+}
+
+/* Accent phrase: the same italic serif in forest green used for the
+   emphasised words in page ledes ("global innovation hubs"). */
+em.accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1em;
+  letter-spacing: 0.005em;
+  color: var(--forest);
+}

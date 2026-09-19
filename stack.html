@@ -37,7 +37,7 @@
             <h3>EklipseLab</h3>
             <span class="tag category">ideas</span>
           </div>
-          <p>Strategic infrastructure for ideas and intelligence: research, frameworks, intellectual property, trademarks, and ecosystem intelligence. Host of Polaris.</p>
+          <p>Strategic infrastructure for <em class="accent">ideas and intelligence</em>: research, frameworks, intellectual property, trademarks, and ecosystem intelligence. Host of Polaris.</p>
         </div>
 
         <div class="stack-card">
@@ -46,7 +46,7 @@
             <h3>Eklipse Global Partners</h3>
             <span class="tag category">companies</span>
           </div>
-          <p>Strategic infrastructure for companies: narrative, strategy, alignment, execution, and cross-border connectivity.</p>
+          <p>Strategic infrastructure for <em class="accent">companies</em>: narrative, strategy, alignment, execution, and cross-border connectivity.</p>
         </div>
 
         <div class="stack-card">
@@ -55,7 +55,7 @@
             <h3>Eklipse Capital Partners</h3>
             <span class="tag category">capital</span>
           </div>
-          <p>Strategic infrastructure for capital: investment, company-building support, networks, and cross-border technology flows.</p>
+          <p>Strategic infrastructure for <em class="accent">capital</em>: investment, company-building support, networks, and cross-border technology flows.</p>
         </div>
       </div>
 
@@ -70,6 +70,9 @@
             <marker id="loop-arrow" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
               <path d="M0,0.4 L6.4,3.2 L0,6 Z" fill="#b6b3a8" />
             </marker>
+            <filter id="loop-glow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="2.4" />
+            </filter>
           </defs>
 
           <!-- Nodes sit at 120 degree intervals on a circle of radius 115
@@ -81,17 +84,26 @@
             <path d="M 95 175 A 115 115 0 0 1 152.5 75.4" />
           </g>
 
+          <g class="loop-pulse">
+            <circle r="7" fill="#d6fd78" filter="url(#loop-glow)">
+              <animateMotion dur="6s" repeatCount="indefinite" path="M 210 60 A 115 115 0 1 1 209.99 60" />
+            </circle>
+            <circle r="3.2" fill="#2f4f3f">
+              <animateMotion dur="6s" repeatCount="indefinite" path="M 210 60 A 115 115 0 1 1 209.99 60" />
+            </circle>
+          </g>
+
           <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11.5" font-weight="500" letter-spacing="0.06em" text-anchor="middle">
             <g>
-              <circle cx="210" cy="60" r="44" fill="#c8c8fb" fill-opacity="0.38" stroke="#a9a8f2" stroke-width="1.4" />
+              <circle class="loop-node n-ideas" cx="210" cy="60" r="44" fill="#c8c8fb" fill-opacity="0.38" stroke="#a9a8f2" stroke-width="1.4" />
               <text x="210" y="64.5" fill="#2a2a5c">IDEAS</text>
             </g>
             <g>
-              <circle cx="309.6" cy="232.5" r="44" fill="#72f5af" fill-opacity="0.38" stroke="#3fc98a" stroke-width="1.4" />
+              <circle class="loop-node n-companies" cx="309.6" cy="232.5" r="44" fill="#72f5af" fill-opacity="0.38" stroke="#3fc98a" stroke-width="1.4" />
               <text x="309.6" y="237" fill="#14532d">COMPANIES</text>
             </g>
             <g>
-              <circle cx="110.4" cy="232.5" r="44" fill="#d7bbfb" fill-opacity="0.38" stroke="#b98ef0" stroke-width="1.4" />
+              <circle class="loop-node n-capital" cx="110.4" cy="232.5" r="44" fill="#d7bbfb" fill-opacity="0.38" stroke="#b98ef0" stroke-width="1.4" />
               <text x="110.4" y="237" fill="#4c1d95">CAPITAL</text>
             </g>
           </g>
