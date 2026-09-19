@@ -28,7 +28,7 @@
       "body": [
         {
           "type": "p",
-          "text": "In the past, Silicon Valley was built on one instruction: move fast and break things. During the dot-com boom, that instruction was radical because speed itself was the scarce resource — code took months to ship, teams took quarters to hire, distribution took years to build. Whoever moved fastest usually won."
+          "text": "In the past, Silicon Valley was built on one directive: move fast and break things. During the dot-com boom, that instruction was radical because speed itself was the scarce resource — engineering teams were expensive, code took months to ship, teams took quarters to hire, distribution took years to build. Whoever moved fastest usually won."
         },
         {
           "type": "h2",
@@ -36,11 +36,11 @@
         },
         {
           "type": "p",
-          "text": "That advantage is almost completely gone. AI has made speed cheap. What took a dot-com engineer six months now takes an AI-assisted founder a weekend. Every founder has access to the same instant infrastructure, the same code-generation tools, the same distribution channels. When everyone can move fast, speed alone stops being the edge."
+          "text": "That advantage is almost completely gone. AI has made speed cheap. What took a dot-com engineer six months now takes an AI-assisted founder a weekend, or even less for a 10x developer. Every founder has access to the same instant infrastructure, the same code-generation tools, the same distribution channels. When everyone can move fast, speed alone stops being the edge."
         },
         {
           "type": "pull",
-          "text": "So what replaces it? Velocity — speed with direction. A company sprinting in the wrong direction just reaches the wrong destination sooner, and AI has only raised the speed at which founders can make expensive mistakes. Velocity equals speed × direction. When speed multiplies for free, direction becomes the only variable that still separates the founders who compound from the founders who just move."
+          "text": "So what replaces it? Velocity — speed with direction. A company sprinting in the wrong direction just reaches the wrong destination sooner, and AI has only raised the speed at which founders can make expensive mistakes. Velocity = speed × direction. When speed multiplies for free, direction becomes the only variable that still separates the founders who compound from the founders who just move."
         },
         {
           "type": "h2",
@@ -57,6 +57,10 @@
         {
           "type": "p",
           "text": "This is also a question of time horizon. Time is relative: an hour spent building the wrong thing costs a founder more than a week spent clarifying the right one, even though the calendar disagrees. Founders building for a decade and founders building for a fundraising cycle should not be making the same trade-offs, but at AI speed, it is easy to let the calendar make that decision instead of making it on purpose. Time is cheap to spend now. Making it count is not automatic — it is a choice."
+        },
+        {
+          "type": "p",
+          "text": "Founder time remains a scarce resource. Yet it is precisely the resource required to keep a company's strategy on course. Founders are often in constant motion — squeezing in one more meeting, one more client pitch, or one more investor conversation. It's difficult for them to give their undivided attention to asking or thinking about where the company is going, and how it is currently moving."
         },
         {
           "type": "p",
