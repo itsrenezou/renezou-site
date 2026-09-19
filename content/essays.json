@@ -105,11 +105,11 @@
       "body": [
         {
           "type": "p",
-          "text": "Companies don't become misaligned once; they repeatedly drift out of alignment as their environment changes. An “Eklipse” is therefore a natural part of company-building, and its magnitude depends on how much has changed."
+          "text": "Companies don't become misaligned once; they repeatedly drift out of alignment as their environment changes. An “Eklipse” is one of these moments of misalignment and realignment. Its magnitude depends on how much the company or its environment has changed. Sometimes an Eklipse is small, requiring only incremental adjustments. Other times, the gap is substantial, demanding a fundamental shift in strategy, structures, capabilities or direction."
         },
         {
           "type": "h2",
-          "text": "Every Company Goes Through an Eklipse"
+          "text": "Every Company Goes Through Eklipses"
         },
         {
           "type": "p",
@@ -174,7 +174,7 @@
         },
         {
           "type": "p",
-          "text": "Good companies perform many of these corrections themselves. Founders rethink strategy. Leadership teams rewrite positioning. Boards pressure-test priorities. Teams adapt. But there is a point where being inside the system makes the system difficult to see."
+          "text": "Good companies perform many of these corrections themselves. Founders rethink strategy. Leadership teams rewrite positioning and trickle it down to the rest of the teams. Boards pressure-test priorities and guide the C-suite in implementing new blueprints. Teams adapt. But there is a point where being inside the system makes the system difficult to see."
         },
         {
           "type": "p",
@@ -194,7 +194,11 @@
         },
         {
           "type": "p",
-          "text": "The result is strategic leverage — and ultimately, greater organizational velocity. That reflects the broader principle behind Eklipse: clarity, alignment and execution multiply the impact of the resources a company already has. Every company will change. The question is whether it periodically realigns itself with what it has become."
+          "text": "The result is strategic leverage — and ultimately, greater organizational velocity. That reflects the broader principle behind Eklipse: clarity, alignment and execution multiply the impact of the resources a company already has. Every company will change. The question is whether it periodically realigns itself with what it has become?"
+        },
+        {
+          "type": "p",
+          "text": "An “Eklipse” is a natural part of company-building, but its magnitude depends on how much has changed."
         }
       ],
       "type": "Methodology",
