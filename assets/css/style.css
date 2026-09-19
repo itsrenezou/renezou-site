@@ -1101,15 +1101,6 @@ em.accent {
   color: var(--forest);
 }
 
-/* Cycle table in "What is an Eklipse?": a narrow number column, equal
-   columns for theme and outcome so "Know who you are" stays on one line,
-   and the numbers, headers and durations in mono like the rest of the
-   site's metadata. On phones the rows stack instead of squeezing. */
-.essay-body .stat-table {
-  border-radius: 12px;
-cd ~/Desktop/renezou-site
-
-cat >> assets/css/style.css <<'CSSEOF'
 
 /* Cycle table in "What is an Eklipse?": a narrow number column, equal
    columns for theme and outcome so "Know who you are" stays on one line,
@@ -1121,7 +1112,7 @@ cat >> assets/css/style.css <<'CSSEOF'
   background: var(--bg);
 }
 .essay-body .stat-row {
-  grid-template-columns: 3.5rem minmax(0, 1.25fr) minmax(0, 1.25fr) 5.5rem;
+  grid-template-columns: 2.25rem minmax(0, 1.25fr) minmax(0, 1.25fr) 5.5rem;
   column-gap: 20px;
   align-items: baseline;
   padding: 15px 20px;
