@@ -1229,7 +1229,16 @@ em.accent {
   flex-direction: column;
 }
 .essay-list .pub-card .essay-card-top { flex-wrap: wrap; row-gap: 5px; }
-.essay-list .pub-card .essay-meta { margin-left: auto; }
+/* Type · date moves from the tag row (top-right) to the bottom edge of the
+   card instead — margin-top: auto in the card's flex column pushes it down
+   regardless of how long the teaser above it runs, so it lines up evenly
+   along the bottom of every card in a row. */
+.essay-list .pub-card .essay-meta {
+  margin-left: auto;
+  margin-top: auto;
+  padding-left: 0;
+  padding-top: 12px;
+}
 .essay-list .pub-card .title-chevron { left: -22px; font-size: 13px; }
 .essay-list .pub-card h3 { font-size: 15px; }
 .essay-list .pub-card p {

@@ -37,10 +37,10 @@
       <div class="essay-card-top">
         ${statusTag(e.status)}
         <span class="tag category">${e.category}</span>
-        ${essayMeta(e)}
       </div>
       <h3><span class="title-chevron" aria-hidden="true">&gt;</span>${e.title}</h3>
       <p>${e.cadenceTeaser || e.teaser}</p>
+      ${essayMeta(e)}
     `;
     if (e.hasDraft) {
       return `<a class="essay-card pub-card pub-card--published" href="essay.html?id=${e.id}">${inner}</a>`;
