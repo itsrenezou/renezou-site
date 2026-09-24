@@ -1203,7 +1203,8 @@ em.accent {
 
 .pub-grid {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+  align-items: stretch;
 }
 .pub-grid--progress { grid-template-columns: repeat(3, 1fr); }
 .pub-grid--published { grid-template-columns: repeat(2, 1fr); }
@@ -1215,19 +1216,45 @@ em.accent {
 }
 
 .essay-list .pub-card {
+  /* min-width: 0 overrides the grid item's default min-width: auto, which
+     otherwise sizes each 1fr column to its widest unbreakable content (e.g.
+     the "Entrepreneurship" category tag on a nowrap line) instead of an
+     even third/half — the classic CSS Grid "blowout" bug. */
+  min-width: 0;
   border-top: none;
   margin: 0;
-  padding: 16px 16px 16px 38px;
+  padding: 16px 16px 16px 34px;
   border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
 }
-.essay-list .pub-card .title-chevron { left: -24px; font-size: 13px; }
+.essay-list .pub-card .essay-card-top { flex-wrap: wrap; row-gap: 5px; }
+.essay-list .pub-card .essay-meta { margin-left: auto; }
+.essay-list .pub-card .title-chevron { left: -22px; font-size: 13px; }
 .essay-list .pub-card h3 { font-size: 15px; }
-.essay-list .pub-card p { font-size: 12.5px; max-width: none; }
+.essay-list .pub-card p {
+  font-size: 12.5px;
+  max-width: none;
+  /* Clamp instead of letting mismatched teaser lengths stretch some cards
+     much taller than their row-mates once the grid columns are even width. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.essay-list .pub-card--published p { -webkit-line-clamp: 4; }
+/* The "in the works" cards now carry short, purpose-written cadenceTeaser
+   copy (see content/essays.json) rather than the full essay teaser, so they
+   get more headroom than the 3-line default — this is a safety cap, not
+   meant to visibly truncate that copy. */
+.essay-list .pub-card--progress p { -webkit-line-clamp: 10; }
 
 .pub-card--progress {
   border: 1px solid var(--pub-progress-border);
   background: var(--pub-progress-bg);
+  padding-left: 28px;
 }
+.pub-card--progress .title-chevron { left: -18px; }
 
 .pub-card--published {
   border: 1px solid var(--pub-published-border);

@@ -40,7 +40,7 @@
         ${essayMeta(e)}
       </div>
       <h3><span class="title-chevron" aria-hidden="true">&gt;</span>${e.title}</h3>
-      <p>${e.teaser}</p>
+      <p>${e.cadenceTeaser || e.teaser}</p>
     `;
     if (e.hasDraft) {
       return `<a class="essay-card pub-card pub-card--published" href="essay.html?id=${e.id}">${inner}</a>`;
@@ -51,11 +51,13 @@
   fetch("content/essays.json")
     .then((r) => r.json())
     .then((data) => {
-      // Newest first by date. Dates are month-precision (YYYY-MM), so string
-      // comparison sorts correctly, and 'order' breaks ties within a month.
-      // Entries with no date fall to the bottom rather than the top.
+      // Chronological, oldest first (so e.g. the November piece is the
+      // last item in each group rather than the first). Dates are
+      // month-precision (YYYY-MM), so string comparison sorts correctly,
+      // and 'order' breaks ties within a month. Entries with no date fall
+      // to the bottom rather than the top.
       const essays = data.essays.slice().sort((a, b) => {
-        const byDate = (b.date || "").localeCompare(a.date || "");
+        const byDate = (a.date || "").localeCompare(b.date || "");
         return byDate !== 0 ? byDate : a.order - b.order;
       });
 
