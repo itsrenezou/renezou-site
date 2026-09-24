@@ -27,14 +27,15 @@
 
   /* Publication cadence (grey/white cards) — pulled from the Eklipse brand
      guide rather than the site's own forest palette: Starry Nox for the
-     "in the works" grey, Nova Blanc for "published" white, Starry Argent
-     for the section's small label chips. */
+     "in the works" grey card, Nova Blanc for the "published" white card,
+     Alfa Green for the "in the works" label chip, Tertius Lavender (the
+     existing --progress token) for the "published" label chip. */
   --pub-progress-bg: rgba(89, 89, 89, 0.06);
   --pub-progress-border: rgba(89, 89, 89, 0.22);
   --pub-progress-label: #595959;
   --pub-published-bg: #ffffff;
   --pub-published-border: var(--border);
-  --pub-accent: #eeeec3;
+  --pub-progress-accent: #60ce95;  /* Alfa Green — "In the works" label */
 
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -1191,9 +1192,9 @@ em.accent {
   text-transform: uppercase;
   padding: 3px 9px;
   border-radius: 999px;
-  background: var(--pub-accent);
-  color: var(--ink);
 }
+.pub-group--progress .pub-group-label { background: var(--pub-progress-accent); color: var(--live-ink); }
+.pub-group--published .pub-group-label { background: var(--progress); color: var(--progress-ink); }
 .pub-group-count {
   font-size: 11.5px;
   color: var(--muted);
@@ -1243,3 +1244,15 @@ em.accent {
   background: var(--pub-published-bg);
   box-shadow: 0 3px 14px rgba(23, 23, 26, 0.07);
 }
+
+/* Closing mark — the Eklipse eclipse symbol, small and quiet, under the
+   list-outro note. Muted via opacity rather than a filter so it stays the
+   real brand mark, just de-emphasized to sit below the reading content. */
+.section-mark {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 56px auto 0;
+  opacity: 1;
+}
+

@@ -19,7 +19,11 @@
   const STATUS_LABEL = { live: "pinned", progress: "live" };
 
   function statusTag(status) {
-    return `<span class="tag status-${status === "live" ? "live" : "progress"}">${STATUS_LABEL[status]}</span>`;
+    // The "live" pill (status:"progress" in the JSON, styled lavender via
+    // .tag.status-progress) is retired — only the "pinned" pill still shows.
+    const label = STATUS_LABEL[status];
+    if (label === "live") return "";
+    return `<span class="tag status-${status === "live" ? "live" : "progress"}">${label}</span>`;
   }
 
   function essayMeta(e) {
@@ -103,10 +107,10 @@
       // render as smaller grey cards above; essays with a draft ("published")
       // render as larger white cards below — same essayCard() markup, just
       // grouped by hasDraft instead of listed flat.
-      function pubGroup(label, items, gridClass) {
+      function pubGroup(label, items, gridClass, groupClass) {
         if (!items.length) return "";
         return `
-          <div class="pub-group">
+          <div class="pub-group ${groupClass}">
             <div class="pub-group-head">
               <span class="pub-group-label">${label}</span>
               <span class="pub-group-count">${items.length} ${items.length === 1 ? "essay" : "essays"}</span>
@@ -130,8 +134,8 @@
         const published = filtered.filter((e) => e.hasDraft);
         list.innerHTML = `
           <div class="pub-groups">
-            ${pubGroup("In the works", inProgress, "pub-grid--progress")}
-            ${pubGroup("Published", published, "pub-grid--published")}
+            ${pubGroup("In the works", inProgress, "pub-grid--progress", "pub-group--progress")}
+            ${pubGroup("Published", published, "pub-grid--published", "pub-group--published")}
           </div>
         `;
         if (outro) outro.hidden = false;
