@@ -1221,7 +1221,13 @@ em.accent {
      the "Entrepreneurship" category tag on a nowrap line) instead of an
      even third/half — the classic CSS Grid "blowout" bug. */
   min-width: 0;
-  border-top: none;
+  /* No border-top: none cancellation here on purpose — .essay-list .pub-card
+     (2 classes) would otherwise out-specificity .pub-card--progress /
+     .pub-card--published's own `border: 1px solid ...` shorthand (1 class)
+     regardless of source order, silently dropping just the top edge of the
+     card's frame. The base .essay-card { border-top: ... } row-separator
+     rule is lower specificity than the variants' border, so it loses on
+     its own without needing an explicit cancel here. */
   margin: 0;
   padding: 16px 16px 16px 34px;
   border-radius: var(--radius);
