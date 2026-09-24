@@ -38,9 +38,12 @@
     // pinned to the bottom of the card instead, evened out across the grid.
     const topMeta = e.hasDraft ? essayMeta(e) : "";
     const bottomMeta = e.hasDraft ? "" : essayMeta(e);
+    // Status pill (pinned/live) only shows on published cards now — grey
+    // "in the works" cards drop it entirely.
+    const status = e.hasDraft ? statusTag(e.status) : "";
     const inner = `
       <div class="essay-card-top">
-        ${statusTag(e.status)}
+        ${status}
         <span class="tag category">${e.category}</span>
         ${topMeta}
       </div>
