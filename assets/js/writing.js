@@ -39,9 +39,9 @@
       <p>${e.teaser}</p>
     `;
     if (e.hasDraft) {
-      return `<a class="essay-card" href="essay.html?id=${e.id}">${inner}</a>`;
+      return `<a class="essay-card pub-card pub-card--published" href="essay.html?id=${e.id}">${inner}</a>`;
     }
-    return `<div class="essay-card locked">${inner}</div>`;
+    return `<div class="essay-card locked pub-card pub-card--progress">${inner}</div>`;
   }
 
   fetch("content/essays.json")
@@ -99,6 +99,23 @@
         `;
       }
 
+      // Publication cadence: essays without a draft yet ("in the works")
+      // render as smaller grey cards above; essays with a draft ("published")
+      // render as larger white cards below — same essayCard() markup, just
+      // grouped by hasDraft instead of listed flat.
+      function pubGroup(label, items, gridClass) {
+        if (!items.length) return "";
+        return `
+          <div class="pub-group">
+            <div class="pub-group-head">
+              <span class="pub-group-label">${label}</span>
+              <span class="pub-group-count">${items.length} ${items.length === 1 ? "essay" : "essays"}</span>
+            </div>
+            <div class="pub-grid ${gridClass}">${items.map(essayCard).join("")}</div>
+          </div>
+        `;
+      }
+
       function renderList() {
         const list = document.getElementById("essay-list");
         const outro = document.getElementById("list-outro");
@@ -109,7 +126,14 @@
           if (outro) outro.hidden = true;
           return;
         }
-        list.innerHTML = filtered.map(essayCard).join("");
+        const inProgress = filtered.filter((e) => !e.hasDraft);
+        const published = filtered.filter((e) => e.hasDraft);
+        list.innerHTML = `
+          <div class="pub-groups">
+            ${pubGroup("In the works", inProgress, "pub-grid--progress")}
+            ${pubGroup("Published", published, "pub-grid--published")}
+          </div>
+        `;
         if (outro) outro.hidden = false;
       }
 

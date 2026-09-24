@@ -25,6 +25,17 @@
   --accent-tint: rgba(47, 79, 63, 0.1);
   --accent-glow: rgba(221, 251, 139, 0.4);
 
+  /* Publication cadence (grey/white cards) — pulled from the Eklipse brand
+     guide rather than the site's own forest palette: Starry Nox for the
+     "in the works" grey, Nova Blanc for "published" white, Starry Argent
+     for the section's small label chips. */
+  --pub-progress-bg: rgba(89, 89, 89, 0.06);
+  --pub-progress-border: rgba(89, 89, 89, 0.22);
+  --pub-progress-label: #595959;
+  --pub-published-bg: #ffffff;
+  --pub-published-border: var(--border);
+  --pub-accent: #eeeec3;
+
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
 
@@ -1158,4 +1169,77 @@ em.accent {
   .essay-body .stat-row > div:nth-child(2) { grid-area: theme; }
   .essay-body .stat-row > div:nth-child(3) { grid-area: outcome; }
   .essay-body .stat-row > div:nth-child(4) { grid-area: time; text-align: left; }
+}
+/* ---------- Publication cadence: in-progress (grey) vs published (white) ----------
+   Reuses the existing .essay-card / .tag / .locked "coming soon" styling —
+   only adds the grid grouping and grey/white card treatment on top, so every
+   existing label (status tag, category tag, type · date meta, chevron,
+   "coming soon") still renders exactly as it did in the flat list. */
+.pub-groups { margin-top: 4px; }
+.pub-group { margin-bottom: 30px; }
+.pub-group:last-child { margin-bottom: 0; }
+.pub-group-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.pub-group-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--pub-accent);
+  color: var(--ink);
+}
+.pub-group-count {
+  font-size: 11.5px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.pub-grid {
+  display: grid;
+  gap: 12px;
+}
+.pub-grid--progress { grid-template-columns: repeat(3, 1fr); }
+.pub-grid--published { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 780px) {
+  .pub-grid--progress { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .pub-grid--progress, .pub-grid--published { grid-template-columns: 1fr; }
+}
+
+.essay-list .pub-card {
+  border-top: none;
+  margin: 0;
+  padding: 16px 16px 16px 38px;
+  border-radius: var(--radius);
+}
+.essay-list .pub-card .title-chevron { left: -24px; font-size: 13px; }
+.essay-list .pub-card h3 { font-size: 15px; }
+.essay-list .pub-card p { font-size: 12.5px; max-width: none; }
+
+.pub-card--progress {
+  border: 1px solid var(--pub-progress-border);
+  background: var(--pub-progress-bg);
+}
+
+.pub-card--published {
+  border: 1px solid var(--pub-published-border);
+  background: var(--pub-published-bg);
+}
+.essay-list .pub-card--published h3 { font-size: 17px; }
+.essay-list .pub-card--published p { font-size: 13.5px; }
+
+.essay-list a.pub-card--published:hover {
+  margin: 0;
+  padding: 15px 15px 15px 36px;
+  border: 1px solid rgba(23, 23, 26, 0.16);
+  border-radius: var(--radius);
+  background: var(--pub-published-bg);
+  box-shadow: 0 3px 14px rgba(23, 23, 26, 0.07);
 }
