@@ -33,14 +33,20 @@
   }
 
   function essayCard(e) {
+    // Published (white) cards keep type/date in the top tag row, stacked
+    // full-width like the original list. In-the-works (grey) cards keep it
+    // pinned to the bottom of the card instead, evened out across the grid.
+    const topMeta = e.hasDraft ? essayMeta(e) : "";
+    const bottomMeta = e.hasDraft ? "" : essayMeta(e);
     const inner = `
       <div class="essay-card-top">
         ${statusTag(e.status)}
         <span class="tag category">${e.category}</span>
+        ${topMeta}
       </div>
       <h3><span class="title-chevron" aria-hidden="true">&gt;</span>${e.title}</h3>
       <p>${e.cadenceTeaser || e.teaser}</p>
-      ${essayMeta(e)}
+      ${bottomMeta}
     `;
     if (e.hasDraft) {
       return `<a class="essay-card pub-card pub-card--published" href="essay.html?id=${e.id}">${inner}</a>`;

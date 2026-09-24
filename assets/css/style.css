@@ -1207,12 +1207,12 @@ em.accent {
   align-items: stretch;
 }
 .pub-grid--progress { grid-template-columns: repeat(3, 1fr); }
-.pub-grid--published { grid-template-columns: repeat(2, 1fr); }
+.pub-grid--published { grid-template-columns: 1fr; }
 @media (max-width: 780px) {
   .pub-grid--progress { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
-  .pub-grid--progress, .pub-grid--published { grid-template-columns: 1fr; }
+  .pub-grid--progress { grid-template-columns: 1fr; }
 }
 
 .essay-list .pub-card {
@@ -1230,10 +1230,12 @@ em.accent {
 }
 .essay-list .pub-card .essay-card-top { flex-wrap: wrap; row-gap: 5px; }
 /* Type · date moves from the tag row (top-right) to the bottom edge of the
-   card instead — margin-top: auto in the card's flex column pushes it down
-   regardless of how long the teaser above it runs, so it lines up evenly
-   along the bottom of every card in a row. */
-.essay-list .pub-card .essay-meta {
+   card instead, but only for the "in the works" grid cards — margin-top:
+   auto in the card's flex column pushes it down regardless of how long the
+   teaser above it runs, so it lines up evenly along the bottom of every
+   card in a row. Published cards are stacked full-width now, so their meta
+   stays in the top tag row like the original list. */
+.essay-list .pub-card--progress .essay-meta {
   margin-left: auto;
   margin-top: auto;
   padding-left: 0;
