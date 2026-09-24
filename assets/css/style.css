@@ -8,24 +8,24 @@
 
 :root {
   --ink: #17171a;
-  --forest: #2f4f3f;
+  --forest: #60ce95;
   --muted: #5b5b58;
   --border: #dcdad2;
   --surface: #f2f1ec;
   --bg: #fbfbf9;
 
-  --live: #d6fd78;
-  --live-ink: #2b3a12;
-  --progress: #c8c8fb;
-  --progress-ink: #2a2a5c;
+  --live: #ddfb8b;
+  --live-ink: #3a4712;
+  --progress: #d3bcf7;
+  --progress-ink: #4b3169;
   --mint: #72f5af;
   --purple: #d7bbfb;
 
   /* accent tint — forest at low opacity, used for chips + active states */
-  --accent-tint: rgba(47, 79, 63, 0.1);
-  --accent-glow: rgba(214, 253, 120, 0.4);
+  --accent-tint: rgba(96, 206, 149, 0.1);
+  --accent-glow: rgba(221, 251, 139, 0.4);
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
 
   --sidebar-w: 320px;
@@ -718,7 +718,7 @@ main {
 /* ===== Cursor spotlight + sidebar scrollbar ===== */
 :root {
   --spotlight: rgba(214, 253, 120, 0.26);
-  --scroll-thumb: rgba(47, 79, 63, 0.28);
+  --scroll-thumb: rgba(96, 206, 149, 0.28);
 }
 
 .shell { position: relative; z-index: 1; }
