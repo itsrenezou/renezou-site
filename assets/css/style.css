@@ -645,6 +645,19 @@ main {
 .work-block p { margin: 0 0 14px; font-size: 15px; line-height: 1.7; color: var(--ink); }
 .work-block .lead-p { color: var(--muted); }
 
+/* Small tracked-caps kicker under a work-block h2 (e.g. "My Story"), in the
+   same mono-metadata voice as tags/essay-meta elsewhere, deliberately not
+   using .eyebrow's pill style so it doesn't compete with the page's own
+   top eyebrow badge. */
+.story-tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: -6px 0 14px;
+}
+
 /* ---------- Stack page ---------- */
 
 .stack-grid {
