@@ -141,6 +141,7 @@ button {
   object-fit: cover;
   border: 1px solid var(--border);
   flex: none;
+  filter: grayscale(100%);
 }
 
 .identity-lines {
@@ -1030,8 +1031,10 @@ nav.primary-nav a.active:hover {
 .title-chevron {
   position: absolute;
   left: -30px;
-  top: 50%;
-  transform: translateY(-50%);
+  /* Aligned to the first line's cap-height rather than vertically centered
+     on the whole h3 block, so it still sits right next to the title even
+     when a longer title wraps to a second line. */
+  top: 0.2em;
   font-family: var(--font-mono);
   font-size: 15px;
   font-weight: 400;
@@ -1176,7 +1179,7 @@ em.accent {
    only adds the grid grouping and grey/white card treatment on top, so every
    existing label (status tag, category tag, type · date meta, chevron,
    "coming soon") still renders exactly as it did in the flat list. */
-.pub-groups { margin-top: 4px; }
+.pub-groups { margin-top: 22px; }
 .pub-group { margin-bottom: 30px; }
 .pub-group:last-child { margin-bottom: 0; }
 .pub-group-head {
@@ -1249,6 +1252,7 @@ em.accent {
 }
 .essay-list .pub-card .title-chevron { left: -22px; font-size: 13px; }
 .essay-list .pub-card h3 { font-size: 15px; }
+.essay-list .pub-card--progress h3 { font-size: 13px; letter-spacing: -0.2px; }
 .essay-list .pub-card p {
   font-size: 12.5px;
   max-width: none;
