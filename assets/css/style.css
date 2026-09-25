@@ -134,6 +134,14 @@ button {
   align-items: flex-start;
 }
 
+.avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: none;
+}
+
 .avatar {
   width: var(--avatar-size);
   height: var(--avatar-size);
@@ -142,6 +150,22 @@ button {
   border: 1px solid var(--border);
   flex: none;
 }
+
+/* Small brand-color accent, filling the space left below the avatar (the
+   identity-lines column runs taller than the avatar). Reuses the same
+   palette already used for the "in the works"/"published" cadence chips
+   on the Writing page, so it reads as one consistent accent system. */
+.avatar-accents {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 46px;
+}
+
+.accent-bar { border-radius: 3px; }
+.accent-bar--a { width: 18px; height: 18px; background: var(--pub-progress-accent); }
+.accent-bar--b { width: 11px; height: 40px; background: var(--progress); }
+.accent-bar--c { width: 9px; height: 46px; background: var(--live); }
 
 .identity-lines {
   display: flex;
