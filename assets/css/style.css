@@ -157,15 +157,15 @@ button {
    on the Writing page, so it reads as one consistent accent system. */
 .avatar-accents {
   display: flex;
-  align-items: flex-end;
-  gap: 5px;
+  align-items: flex-start;
+  gap: 6px;
   height: 46px;
 }
 
 .accent-bar { border-radius: 3px; }
-.accent-bar--a { width: 18px; height: 18px; background: var(--pub-progress-accent); }
-.accent-bar--b { width: 11px; height: 40px; background: var(--progress); }
-.accent-bar--c { width: 9px; height: 46px; background: var(--live); }
+.accent-bar--a { width: 14px; height: 14px; background: var(--pub-progress-accent); }
+.accent-bar--b { width: 14px; height: 28px; background: var(--progress); }
+.accent-bar--c { width: 14px; height: 46px; background: var(--live); }
 
 .identity-lines {
   display: flex;
