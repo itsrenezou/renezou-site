@@ -163,9 +163,9 @@ button {
 }
 
 .accent-bar { border-radius: 3px; }
-.accent-bar--a { width: 18px; height: 46px; background: var(--pub-progress-accent); }
+.accent-bar--a { width: 18px; height: 18px; background: var(--pub-progress-accent); }
 .accent-bar--b { width: 11px; height: 40px; background: var(--progress); }
-.accent-bar--c { width: 9px; height: 18px; background: var(--live); }
+.accent-bar--c { width: 9px; height: 46px; background: var(--live); }
 
 .identity-lines {
   display: flex;
