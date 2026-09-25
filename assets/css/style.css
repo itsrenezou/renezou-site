@@ -883,7 +883,9 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 .page-header-top { gap: 10px; }
 
 /* --- Links: mono, arrow hard right, white box on hover --- */
-.social-row { gap: 1px; }
+/* Indented to align with the "Currently building EKLIPSE" text (after the
+   status dot), not with the meta-block's "local"/"based" labels. */
+.social-row { gap: 1px; padding-left: 12px; }
 .social-row a {
   justify-content: space-between;
   font-family: var(--font-mono);
