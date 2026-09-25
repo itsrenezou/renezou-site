@@ -141,7 +141,6 @@ button {
   object-fit: cover;
   border: 1px solid var(--border);
   flex: none;
-  filter: grayscale(100%);
 }
 
 .identity-lines {
