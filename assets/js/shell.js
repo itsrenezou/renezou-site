@@ -53,7 +53,7 @@
     </div>
 
     <div class="bio-wrap">
-      <p class="bio">I write about how geography shapes the production, accumulation, and <strong>movement of capital</strong> in the AI era — and with <strong>Eklipse</strong>, I build on that thesis directly. Eklipse is strategic infrastructure for ambitious founders: it builds scalable systems that turn founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS — turning a love of <strong>deep tech</strong> into an investing lens of my own.</p>
+      <p class="bio">I write about how geography shapes the production, accumulation, and <strong>movement of capital</strong> in the AI era — and with <strong>Eklipse</strong>, I build on that thesis directly. Eklipse is strategic infrastructure for ambitious founders: it builds scalable systems that turn founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS — turning a love of <strong>deep tech</strong> into an investing lens of my own. If you can't tell, I love <strong>cities</strong>.</p>
     </div>
 
     <nav class="primary-nav">${navHtml()}</nav>
