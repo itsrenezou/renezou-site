@@ -29,7 +29,7 @@
       "body": [
         {
           "type": "p",
-          "text": "In the past, Silicon Valley was built on one directive: move fast and break things. During the dot-com boom, that instruction was radical because speed itself was the scarce resource — engineering teams were expensive, code took months to ship, teams took quarters to hire, distribution took years to build. Whoever moved fastest usually won."
+          "text": "In the past, Silicon Valley was built on one directive: move fast and break things. During the dot-com bubble, that instruction was radical because speed itself was the scarce resource — engineering teams were expensive, code took months to ship, teams took quarters to hire, distribution took years to build. Whoever moved fastest usually won."
         },
         {
           "type": "h2",
@@ -49,7 +49,7 @@
         },
         {
           "type": "p",
-          "text": "Direction is really a question of purpose – not “how fast can we ship” but “why are we building this, and for whom.” That question used to get answered implicitly, over the months a slower build cycle forced founders to sit with a decision before executing it. AI removed that forced pause. Now founders have to build the pause back in deliberately, or they will ship their way into the wrong company faster than ever."
+          "text": "Direction is really a question of purpose – not “how fast can we ship” but “why are we building this, and for whom.” That question used to get answered implicitly, over the months a slower build cycle forced founders to sit with a decision before executing it. AI removed that forced pause. Now founders have to build the pause back in deliberately with “intention”, else they will ship their way into the wrong company faster than ever."
         },
         {
           "type": "h2",
@@ -57,11 +57,11 @@
         },
         {
           "type": "p",
-          "text": "This is also a question of time horizon. Time is relative: an hour spent building the wrong thing costs a founder more than a week spent clarifying the right one, even though the calendar disagrees. Founders building for a decade and founders building for a fundraising cycle should not be making the same trade-offs, but at AI speed, it is easy to let the calendar make that decision instead of making it on purpose. Time is cheap to spend now. Making it count is not automatic — it is a choice."
+          "text": "This is also a question of time horizon. Time is relative: an hour spent building the wrong thing costs a founder more than a week spent clarifying the right one, even though the calendar disagrees. Founders building for a decade and founders building for a fundraising cycle should not be making the same trade-offs, but at AI speed, it is easy to let the calendar make that decision instead of making it on purpose. Time is cheap to spend now. Making it count is not automatic."
         },
         {
           "type": "p",
-          "text": "Founder time remains a scarce resource. Yet it is precisely the resource required to keep a company's strategy on course. Founders are often in constant motion — squeezing in one more meeting, one more client pitch, or one more investor conversation. It's difficult for them to give their undivided attention to asking or thinking about where the company is going, and how it is currently moving."
+          "text": "That said, Founder time remains a scarce resource. Yet it is precisely the resource required (ideally in abundance) to keep a company's strategy on course. Founders are often in constant motion — squeezing in one more meeting, one more client pitch, or one more investor conversation. It's difficult for them to give their undivided attention to asking or thinking about where the company is going, and how it is currently moving."
         },
         {
           "type": "p",
@@ -73,11 +73,11 @@
         },
         {
           "type": "p",
-          "text": "That choice is what separates founders who optimize for speed — more meetings, more hires, more launches, more fundraising — from founders who optimize for velocity: fewer, clearer decisions that compound. Strategic leverage comes from exactly that gap: generating disproportionately greater outcomes from the same founder time and attention, not from adding more of it."
+          "text": "The choice to dedicate time to collectively (or non-collectively) defining the future direction of a company is what separates founders who optimize for speed — more meetings, more hires, more launches, more fundraising — from founders who optimize for velocity: fewer, clearer decisions that compound with the right directive or guidance. Strategic leverage comes from exactly that gap: generating disproportionately greater outcomes from the same founder time and attention, not from adding more of it."
         },
         {
           "type": "p",
-          "text": "Time has always been a finite resource, and every founder still has the same allocation of it. What has changed is that AI made the wrong use of that resource faster, not just the right one. The founders who win this decade will not be the ones who build fastest. They will be the ones who knew, before they started building, exactly what direction was worth that speed, and how to recruit people who are rowing in the same direction."
+          "text": "Time has always been a finite resource, and every founder still has the same allocation of it. What has changed is that AI made the wrong use of that resource amplified. The founders who win this decade will not be the ones who build fastest. They will be the ones who knew, before they started building, exactly what direction was worth that speed, and how to recruit people who are rowing in the same direction."
         }
       ],
       "type": "Thesis",
