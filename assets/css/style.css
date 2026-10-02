@@ -422,11 +422,12 @@ main {
 /* featured box */
 .featured-box {
   max-width: var(--content-max);
-  border: 1px solid var(--border);
+  /* Starry Argent (#eeece3, Eklipse brand guide) — the "start here" highlight */
+  border: 1px solid #dcd9cc;
   border-radius: var(--radius);
   padding: 18px;
   margin-bottom: 34px;
-  background: var(--surface);
+  background: #eeece3;
 }
 .featured-box .fb-eyebrow {
   font-size: 11px;
