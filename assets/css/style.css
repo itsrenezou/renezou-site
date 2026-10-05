@@ -1410,3 +1410,20 @@ em.accent {
   .title-mark { width: 56px; }
   .page-title-row { gap: 18px; margin-top: 28px; }
 }
+
+/* Phones: keep "WRITING — A WORKING LEDGER", the essay count and search on
+   one line. Type scales with the screen (capped at 11px) and tracking,
+   gaps and the search button tighten so the row fits down to ~340px. */
+@media (max-width: 560px) {
+  .page-header-top { gap: 8px; }
+  .page-kicker {
+    font-size: clamp(9px, 2.75vw, 11px);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    min-width: 0;
+  }
+  .page-header-right { gap: 8px; flex: none; }
+  .essay-count-badge { font-size: clamp(9px, 2.75vw, 11px); }
+  .search-toggle { height: 30px; max-width: 30px; }
+  .search-toggle .search-icon { width: 28px; }
+}
