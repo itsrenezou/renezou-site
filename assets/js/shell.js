@@ -42,7 +42,7 @@
           <div><span class="label">Category</span>strategic infrastructure</div>
           <div><span class="label">Investor</span>pre-seed, deep tech</div>
         </div>
-        <!-- Links to Work & track record for now; planned to become a full-bio pop-up. -->
+        <!-- Links to Work & Track Record for now; planned to become a full-bio pop-up. -->
         <a class="bio-button" href="work.html#bio">Bio</a>
       </div>
     </div>
