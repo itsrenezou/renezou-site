@@ -43,7 +43,7 @@
           <div><span class="label">Investor</span>pre-seed, deep tech</div>
         </div>
         <!-- Links to Work & track record for now; planned to become a full-bio pop-up. -->
-        <a class="bio-button" href="work.html">Bio</a>
+        <a class="bio-button" href="work.html#bio">Bio</a>
       </div>
     </div>
 

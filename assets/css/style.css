@@ -1095,11 +1095,7 @@ nav.primary-nav a.active:hover {
 /* Work page closing note: a divider in place of the heading, then the
    paragraph set larger in the serif, and the inbox link styled like the
    sidebar's "Currently building" line (lime dot, mono, thin underline). */
-.work-block.closing {
-  border-top: 1px solid var(--border);
-  padding-top: 28px;
-}
-.work-block.closing p {
+.bio-block p {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   line-height: 1.55;
