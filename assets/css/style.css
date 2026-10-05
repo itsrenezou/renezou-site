@@ -968,9 +968,11 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   padding: 18px 16px;
 }
 
-.page-intro {
+.list-outro {
   max-width: var(--content-max);
-  margin: -14px 0 32px;   /* sits close under the lede */
+  margin: 26px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
   font-size: var(--text-sm);
   line-height: 1.65;
   color: var(--muted);
@@ -1333,16 +1335,6 @@ em.accent {
   box-shadow: 0 3px 14px rgba(23, 23, 26, 0.07);
 }
 
-/* Closing mark — the Eklipse eclipse symbol, small and quiet, under the
-   essay list. Muted via opacity rather than a filter so it stays the
-   real brand mark, just de-emphasized to sit below the reading content. */
-.section-mark {
-  display: block;
-  width: 120px;
-  height: auto;
-  margin: 56px auto 0;
-  opacity: 1;
-}
 
 
 /* Page kicker — light grey, widely tracked mono label above the page title
@@ -1412,7 +1404,6 @@ em.accent {
 .page-title--mark { font-size: var(--text-2xl); margin: 0; line-height: 1.1; }
 .page-title-row + * { margin-top: 0; }
 .page-header:has(.page-title-row) + .lede { margin-top: 34px; margin-bottom: 48px; }
-.page-header:has(.page-title-row) ~ .page-intro { margin-top: -24px; margin-bottom: 48px; }
 
 @media (max-width: 560px) {
   .portrait { width: 112px; height: 166px; }
