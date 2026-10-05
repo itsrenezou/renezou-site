@@ -1108,7 +1108,7 @@ nav.primary-nav a.active:hover {
 }
 .bio-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-.bio-block p {
+.serif-block p {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   line-height: 1.55;
