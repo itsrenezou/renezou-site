@@ -1436,3 +1436,90 @@ em.accent {
   .search-toggle { height: 30px; max-width: 30px; }
   .search-toggle .search-icon { width: 28px; }
 }
+
+/* =========================================================
+   Full-page essay (after dianaseo.xyz): no sidebar, one centered
+   680px reading column, mono breadcrumb, section list fixed at the
+   left edge on wide screens, thin reading-progress bar on top.
+   ========================================================= */
+.essay-full .essay-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 34px 24px 96px;
+  position: relative;
+  z-index: 1;
+}
+.essay-full .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+.essay-full .breadcrumb a { color: var(--muted); transition: color 180ms ease; }
+.essay-full .breadcrumb a:hover { color: var(--forest); }
+.essay-full .breadcrumb .here { color: var(--ink); }
+
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--forest);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.essay-full .essay-toc {
+  position: fixed;
+  top: 50%;
+  left: max(18px, calc(50vw - 514px));
+  transform: translateY(-50%);
+  z-index: 40;
+  width: 160px;
+  display: none;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0;
+}
+@media (min-width: 1080px) {
+  .essay-full .essay-toc.ready { display: flex; }
+}
+.essay-full .essay-toc a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 6px 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.3;
+  color: var(--muted);
+  transition: color 200ms ease;
+}
+.essay-full .essay-toc a::before { content: none; }
+.essay-full .essay-toc .tick {
+  flex: none;
+  width: 14px;
+  height: 1px;
+  background: var(--border);
+  transition: background 200ms ease, width 200ms ease;
+}
+.essay-full .essay-toc .k { min-width: 0; }
+.essay-full .essay-toc a:hover { color: var(--ink); }
+.essay-full .essay-toc a:hover .tick { background: var(--muted); width: 20px; }
+.essay-full .essay-toc a.active { color: var(--forest); }
+.essay-full .essay-toc a.active .tick { background: var(--forest); width: 26px; }
+
+@media (max-width: 560px) {
+  .essay-full .essay-wrap { padding: 26px 18px 76px; }
+  .essay-full .breadcrumb { margin-bottom: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .essay-full .essay-toc a, .essay-full .essay-toc .tick { transition: none; }
+}

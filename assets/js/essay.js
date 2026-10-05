@@ -66,26 +66,39 @@
 
       document.getElementById("essay-body").innerHTML = essay.body.map(renderBlock).join("");
 
-      // Build TOC from h2 blocks
+      // Section list fixed at the left edge (shown on wide screens), plus
+      // the reading-progress bar along the top of the window.
       const toc = document.getElementById("essay-toc");
       const headers = essay.body
         .map((b, idx) => (b.type === "h2" ? { idx, text: b.text } : null))
         .filter(Boolean);
+      const bar = document.getElementById("read-progress");
+      let links = [];
+      let targets = [];
       if (headers.length) {
-        toc.innerHTML = headers.map((h) => `<a href="#sec-${h.idx}">${h.text}</a>`).join("");
-
-        const links = Array.from(toc.querySelectorAll("a"));
-        const targets = headers.map((h) => document.getElementById(`sec-${h.idx}`));
-        const onScroll = () => {
+        toc.innerHTML = headers
+          .map((h) => `<a href="#sec-${h.idx}"><span class="tick" aria-hidden="true"></span><span class="k">${h.text}</span></a>`)
+          .join("");
+        toc.classList.add("ready");
+        links = Array.from(toc.querySelectorAll("a"));
+        targets = headers.map((h) => document.getElementById(`sec-${h.idx}`));
+      }
+      const onScroll = () => {
+        if (links.length) {
           let currentIdx = 0;
           targets.forEach((t, i) => {
-            if (t && t.getBoundingClientRect().top < 120) currentIdx = i;
+            if (t && t.getBoundingClientRect().top < window.innerHeight * 0.35) currentIdx = i;
           });
           links.forEach((l, i) => l.classList.toggle("active", i === currentIdx));
-        };
-        document.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
-      }
+        }
+        if (bar) {
+          const max = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
+        }
+      };
+      document.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      onScroll();
     })
     .catch((err) => {
       console.error(err);
