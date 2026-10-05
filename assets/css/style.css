@@ -41,17 +41,14 @@
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* Type scale — every font-size on the site uses one of these. */
-  --text-micro: 11px;     /* tags, kbd, eyebrows */
-  --text-caption: 12px;   /* mono metadata, filters, breadcrumbs */
-  --text-small: 13px;     /* bio, card blurbs, social links */
-  --text-ui: 14px;        /* nav, ⌘K list, small card titles */
-  --text-body: 15px;      /* body text, essay body */
-  --text-lead: 17px;      /* lede, essay dek */
-  --text-heading: 19px;   /* card headings, name, pull quote */
-  --text-title: 26px;     /* page titles, essay title on mobile */
-  --text-display: 32px;   /* essay title */
-  --text-accent: 1.1em;   /* italic serif accent inside a paragraph */
+  /* Type scale — six sizes, plus one relative accent. */
+  --text-xs: 12px;      /* labels, eyebrows, mono metadata, filters */
+  --text-sm: 13px;      /* bio, card blurbs, social links */
+  --text-md: 15px;      /* body, nav, essay body */
+  --text-lg: 19px;      /* ledes, card headings, name, pull quote */
+  --text-xl: 26px;      /* page titles */
+  --text-2xl: 32px;     /* essay titles */
+  --text-accent: 1.1em; /* italic serif accent inside a paragraph */
 
   --weight-regular: 400;
   --weight-medium: 500;
@@ -78,7 +75,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: var(--text-body);
+  font-size: var(--text-md);
   line-height: 1.6;
 }
 
@@ -95,7 +92,7 @@ button {
 
 .eyebrow {
   display: inline-block;
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: var(--weight-semibold);
@@ -143,7 +140,7 @@ button {
 
 .identity-name {
   font-family: var(--font-serif);
-  font-size: var(--text-heading);
+  font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
   margin: 0;
   padding-left: calc(var(--avatar-size) + var(--identity-gap));
@@ -192,7 +189,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
   padding-top: 2px;
 }
@@ -231,7 +228,7 @@ button {
 .bio {
   position: relative;
   z-index: 1;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
   line-height: 1.65;
 }
@@ -253,19 +250,19 @@ nav.primary-nav a {
   align-items: baseline;
   padding: 7px 8px;
   border-radius: var(--radius-sm);
-  font-size: var(--text-ui);
+  font-size: var(--text-md);
   font-weight: var(--weight-medium);
 }
 
 nav.primary-nav a:hover { background: var(--surface); }
 nav.primary-nav a.active { background: var(--accent-tint); color: var(--forest); }
-nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font-weight: var(--weight-regular); }
+nav.primary-nav a .sub { font-size: var(--text-xs); color: var(--muted); font-weight: var(--weight-regular); }
 
 .meta-block {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
 }
 
 .meta-row {
@@ -287,7 +284,7 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
 }
 .building-badge .pulse {
   width: 6px; height: 6px; border-radius: 50%;
@@ -299,7 +296,7 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
 }
 .social-row a {
   display: flex;
@@ -324,13 +321,13 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
 }
 .newsletter .nl-title {
   font-family: var(--font-serif);
-  font-size: var(--text-body);
+  font-size: var(--text-md);
   font-weight: var(--weight-bold);
   letter-spacing: 0.02em;
   margin-bottom: 6px;
 }
 .newsletter .nl-blurb {
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
   line-height: 1.5;
   margin-bottom: 10px;
@@ -345,7 +342,7 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
   padding: 8px 10px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   background: var(--bg);
   font-family: inherit;
 }
@@ -355,12 +352,12 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
   background: var(--ink);
   color: var(--bg);
   border-radius: var(--radius-sm);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   white-space: nowrap;
 }
 .newsletter button:hover { opacity: 0.85; }
-.newsletter .nl-note { font-size: var(--text-micro); color: var(--muted); margin-top: 8px; }
+.newsletter .nl-note { font-size: var(--text-xs); color: var(--muted); margin-top: 8px; }
 
 .cmdk-trigger {
   display: flex;
@@ -370,14 +367,14 @@ nav.primary-nav a .sub { font-size: var(--text-micro); color: var(--muted); font
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 9px 10px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
   background: var(--bg);
   margin-top: auto;
 }
 .cmdk-trigger kbd {
   font-family: var(--font-sans);
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1px 5px;
@@ -401,19 +398,19 @@ main {
   max-width: var(--content-max);
 }
 .essay-count-badge {
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
   white-space: nowrap;
 }
 .page-title {
   font-family: var(--font-serif);
-  font-size: var(--text-title);
+  font-size: var(--text-xl);
   font-weight: var(--weight-medium);
   margin: 4px 0 0;
 }
 .page-sub {
   color: var(--muted);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   margin-top: 6px;
 }
 
@@ -425,7 +422,7 @@ main {
   padding: 9px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
   background: var(--surface);
   width: 100%;
@@ -434,7 +431,7 @@ main {
 
 .lede {
   max-width: var(--content-max);
-  font-size: var(--text-lead);
+  font-size: var(--text-lg);
   line-height: 1.6;
   margin: 22px 0 32px;
 }
@@ -451,7 +448,7 @@ main {
   background: #eeece3;
 }
 .featured-box .fb-eyebrow {
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: var(--weight-semibold);
@@ -463,8 +460,8 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.fb-card h3 { font-size: var(--text-ui); margin: 0 0 6px; font-weight: var(--weight-semibold); }
-.fb-card p { font-size: var(--text-small); color: var(--muted); margin: 0; line-height: 1.5; }
+.fb-card h3 { font-size: var(--text-md); margin: 0 0 6px; font-weight: var(--weight-semibold); }
+.fb-card p { font-size: var(--text-sm); color: var(--muted); margin: 0; line-height: 1.5; }
 
 /* filter pills */
 .filters {
@@ -479,7 +476,7 @@ main {
   background: transparent;
   border-radius: 999px;
   padding: 5px 12px;
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
 }
 .filters button.active {
@@ -513,7 +510,7 @@ main {
 .tag {
   display: inline-flex;
   align-items: center;
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   font-weight: var(--weight-semibold);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -525,13 +522,13 @@ main {
 .tag.category { background: transparent; border: 1px solid var(--border); color: var(--muted); text-transform: none; font-weight: var(--weight-medium); }
 
 .essay-card h3 {
-  font-size: var(--text-lead);
+  font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
   margin: 0 0 4px;
   font-family: var(--font-serif);
 }
 .essay-card p {
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
   margin: 0;
   line-height: 1.55;
@@ -542,7 +539,7 @@ main {
   content: "coming soon";
   display: inline-block;
   margin-left: 8px;
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   font-weight: var(--weight-medium);
   color: var(--muted);
   font-family: var(--font-sans);
@@ -559,7 +556,7 @@ main {
   max-width: 900px;
 }
 .breadcrumb {
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
   margin-bottom: 22px;
 }
@@ -569,7 +566,7 @@ main {
   position: sticky;
   top: 60px;
   align-self: start;
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
   display: flex;
   flex-direction: column;
@@ -587,17 +584,17 @@ main {
   gap: 10px;
   margin-bottom: 14px;
 }
-.essay-meta-row .read-time { font-size: var(--text-caption); color: var(--muted); }
+.essay-meta-row .read-time { font-size: var(--text-xs); color: var(--muted); }
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: var(--text-display);
+  font-size: var(--text-2xl);
   font-weight: var(--weight-medium);
   line-height: 1.25;
   margin: 0 0 16px;
 }
 .essay-dek {
-  font-size: var(--text-lead);
+  font-size: var(--text-lg);
   font-style: italic;
   color: var(--muted);
   line-height: 1.55;
@@ -606,9 +603,9 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
-.essay-body { font-size: var(--text-body); line-height: 1.75; }
+.essay-body { font-size: var(--text-md); line-height: 1.75; }
 .essay-body h2 {
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--forest);
@@ -617,7 +614,7 @@ main {
 .essay-body p { margin: 0 0 18px; }
 .essay-body p.pull {
   font-family: var(--font-serif);
-  font-size: var(--text-heading);
+  font-size: var(--text-lg);
   font-style: italic;
   color: var(--ink);
   border-left: 2px solid var(--live);
@@ -635,16 +632,16 @@ main {
   grid-template-columns: 1.4fr 1.4fr 1fr 0.8fr;
   gap: 8px;
   padding: 10px 14px;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   border-top: 1px solid var(--border);
 }
-.essay-body .stat-row:first-child { border-top: none; background: var(--surface); font-weight: var(--weight-semibold); font-size: var(--text-caption); text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.essay-body .stat-row:first-child { border-top: none; background: var(--surface); font-weight: var(--weight-semibold); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
 
 .essay-footer {
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid var(--border);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--muted);
 }
 
@@ -656,7 +653,7 @@ main {
 }
 .work-block h2 {
   font-family: var(--font-serif);
-  font-size: var(--text-heading);
+  font-size: var(--text-lg);
   font-weight: var(--weight-medium);
   display: flex;
   align-items: center;
@@ -664,7 +661,7 @@ main {
   margin: 0 0 12px;
 }
 .work-block h2 .diamond { color: var(--forest); }
-.work-block p { margin: 0 0 14px; font-size: var(--text-body); line-height: 1.7; color: var(--ink); }
+.work-block p { margin: 0 0 14px; font-size: var(--text-md); line-height: 1.7; color: var(--ink); }
 .work-block .lead-p { color: var(--muted); }
 
 /* Small tracked-caps kicker under a work-block h2 (e.g. "My Story"), in the
@@ -673,7 +670,7 @@ main {
    top eyebrow badge. */
 .story-tagline {
   font-family: var(--font-mono);
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
@@ -698,8 +695,8 @@ main {
   gap: 8px;
 }
 .stack-card-top { display: flex; align-items: center; gap: 10px; }
-.stack-card h3 { font-size: var(--text-body); font-weight: var(--weight-semibold); margin: 0; }
-.stack-card p { font-size: var(--text-small); color: var(--muted); margin: 0; line-height: 1.6; }
+.stack-card h3 { font-size: var(--text-md); font-weight: var(--weight-semibold); margin: 0; }
+.stack-card p { font-size: var(--text-sm); color: var(--muted); margin: 0; line-height: 1.6; }
 .stack-card .icon-swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; }
 
 .loop-diagram {
@@ -718,7 +715,7 @@ main {
   border-radius: var(--radius);
   padding: 22px;
   color: var(--muted);
-  font-size: var(--text-ui);
+  font-size: var(--text-md);
 }
 
 /* ---------- Command palette modal ---------- */
@@ -749,7 +746,7 @@ main {
   padding: 14px 16px;
   border-bottom: 1px solid var(--border);
   color: var(--muted);
-  font-size: var(--text-ui);
+  font-size: var(--text-md);
 }
 .cmdk-list { padding: 8px; max-height: 320px; overflow-y: auto; }
 .cmdk-list a {
@@ -757,10 +754,10 @@ main {
   justify-content: space-between;
   padding: 10px 10px;
   border-radius: var(--radius-sm);
-  font-size: var(--text-ui);
+  font-size: var(--text-md);
 }
 .cmdk-list a:hover, .cmdk-list a:focus { background: var(--surface); }
-.cmdk-list .sub { color: var(--muted); font-size: var(--text-caption); }
+.cmdk-list .sub { color: var(--muted); font-size: var(--text-xs); }
 
 /* ---------- Footer meta on mobile ---------- */
 
@@ -783,7 +780,7 @@ main {
   .essay-shell { grid-template-columns: 1fr; }
   .essay-toc { display: none; }
   .fb-grid { grid-template-columns: 1fr; }
-  .essay-title { font-size: var(--text-title); }
+  .essay-title { font-size: var(--text-xl); }
 }
 
 /* ===== Cursor spotlight + sidebar scrollbar ===== */
@@ -854,7 +851,7 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   border-top: 1px solid var(--border);
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   line-height: 1.45;
   color: var(--muted);
 }
@@ -886,14 +883,14 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 }
 .search-toggle .search-icon svg { width: 14px; height: 14px; }
 .search-toggle .search-label {
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   padding-right: 8px;
   opacity: 0;
   transition: opacity 180ms ease 60ms;
 }
 .search-toggle kbd {
   font-family: var(--font-mono);
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1px 5px;
@@ -923,7 +920,7 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 .social-row a {
   justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   padding: 9px 10px;
   margin: 0 -10px;
   border: 1px solid transparent;
@@ -939,10 +936,10 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 .social-row a:hover svg { color: var(--forest); }
 
 /* --- Meta block: mono, wider key column, roomier rows --- */
-.meta-block { font-family: var(--font-mono); font-size: var(--text-caption); gap: 11px; }
+.meta-block { font-family: var(--font-mono); font-size: var(--text-xs); gap: 11px; }
 .meta-row { gap: 12px; }
 .meta-row .k { width: 58px; }
-.building-badge { font-family: var(--font-mono); font-size: var(--text-caption); }
+.building-badge { font-family: var(--font-mono); font-size: var(--text-xs); }
 
 /* --- Essay list: index line, white hover box, closing note --- */
 .list-index {
@@ -950,7 +947,7 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   max-width: var(--content-max);
   margin: 26px 0 2px;
   color: var(--muted);
@@ -976,7 +973,7 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   margin: 26px 0 0;
   padding-top: 18px;
   border-top: 1px solid var(--border);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   line-height: 1.65;
   color: var(--muted);
 }
@@ -998,14 +995,14 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 }
 
 /* Count badge and search label in mono, matching the meta block. */
-.essay-count-badge { font-family: var(--font-mono); font-size: var(--text-caption); }
-.search-toggle .search-label { font-family: var(--font-mono); font-size: var(--text-caption); }
+.essay-count-badge { font-family: var(--font-mono); font-size: var(--text-xs); }
+.search-toggle .search-label { font-family: var(--font-mono); font-size: var(--text-xs); }
 
 /* Profile intro lines in mono, matching the meta block. Mono runs wider than
    Inter, so the size steps down to keep the lines inside the sidebar. */
 .identity-lines {
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   line-height: 1.55;
   gap: 7px;
 }
@@ -1013,14 +1010,14 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
 /* Profile intro lines in mono, sized to hold two lines in the 320px column. */
 .identity-lines {
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   line-height: 1.55;
   gap: 7px;
 }
 
 /* Meta block down from 12px to match the profile intro. */
 .meta-block,
-.building-badge { font-size: var(--text-caption); }
+.building-badge { font-size: var(--text-xs); }
 
 /* Nav rows get the same white card on hover as the links list. Padding drops
    1px to offset the border so rows don't shift. The active row keeps its green
@@ -1057,14 +1054,14 @@ nav.primary-nav a.active:hover {
   margin-left: auto;
   padding-left: 12px;
   font-family: var(--font-mono);
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   color: var(--muted);
   white-space: nowrap;
   letter-spacing: 0.01em;
 }
 
 /* Article titles up a step. */
-.essay-card h3 { font-size: var(--text-heading); }
+.essay-card h3 { font-size: var(--text-lg); }
 
 /* Chevron in a left gutter beside each article title, in the site mono.
    Entry content is indented 40px so the chevrons form their own column.
@@ -1081,7 +1078,7 @@ nav.primary-nav a.active:hover {
      when a longer title wraps to a second line. */
   top: 0.2em;
   font-family: var(--font-mono);
-  font-size: var(--text-body);
+  font-size: var(--text-md);
   font-weight: var(--weight-regular);
   line-height: 1;
   color: #8a8a85;
@@ -1104,7 +1101,7 @@ nav.primary-nav a.active:hover {
 }
 .work-block.closing p {
   font-family: var(--font-serif);
-  font-size: var(--text-heading);
+  font-size: var(--text-lg);
   line-height: 1.55;
   color: var(--ink);
   margin: 0;
@@ -1115,7 +1112,7 @@ nav.primary-nav a.active:hover {
   align-items: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   color: var(--ink);
   text-decoration: none;
 }
@@ -1176,19 +1173,19 @@ em.accent {
   column-gap: 20px;
   align-items: baseline;
   padding: 15px 20px;
-  font-size: var(--text-ui);
+  font-size: var(--text-md);
   line-height: 1.45;
 }
 .essay-body .stat-row:first-child {
   font-family: var(--font-mono);
   font-weight: var(--weight-medium);
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   letter-spacing: 0.1em;
   padding-block: 11px;
 }
 .essay-body .stat-row:not(:first-child) > div:nth-child(1) {
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--forest);
 }
 .essay-body .stat-row:not(:first-child) > div:nth-child(2) { font-weight: var(--weight-medium); color: var(--ink); }
@@ -1201,7 +1198,7 @@ em.accent {
 .essay-body .stat-row > div:nth-child(4) { white-space: nowrap; text-align: right; }
 .essay-body .stat-row:not(:first-child) > div:nth-child(4) {
   font-family: var(--font-mono);
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
 }
 
@@ -1234,7 +1231,7 @@ em.accent {
   margin-bottom: 12px;
 }
 .pub-group-label {
-  font-size: var(--text-micro);
+  font-size: var(--text-xs);
   font-weight: var(--weight-bold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1244,7 +1241,7 @@ em.accent {
 .pub-group--progress .pub-group-label { background: var(--pub-progress-accent); color: var(--live-ink); }
 .pub-group--published .pub-group-label { background: var(--progress); color: var(--progress-ink); }
 .pub-group-count {
-  font-size: var(--text-caption);
+  font-size: var(--text-xs);
   color: var(--muted);
   font-family: var(--font-mono);
 }
@@ -1295,11 +1292,11 @@ em.accent {
   padding-left: 0;
   padding-top: 12px;
 }
-.essay-list .pub-card .title-chevron { left: -22px; font-size: var(--text-small); }
-.essay-list .pub-card h3 { font-size: var(--text-body); }
-.essay-list .pub-card--progress h3 { font-size: var(--text-small); letter-spacing: -0.2px; }
+.essay-list .pub-card .title-chevron { left: -22px; font-size: var(--text-sm); }
+.essay-list .pub-card h3 { font-size: var(--text-md); }
+.essay-list .pub-card--progress h3 { font-size: var(--text-sm); letter-spacing: -0.2px; }
 .essay-list .pub-card p {
-  font-size: var(--text-small);
+  font-size: var(--text-sm);
   max-width: none;
   /* Clamp instead of letting mismatched teaser lengths stretch some cards
      much taller than their row-mates once the grid columns are even width. */
@@ -1326,8 +1323,8 @@ em.accent {
   border: 1px solid var(--pub-published-border);
   background: var(--pub-published-bg);
 }
-.essay-list .pub-card--published h3 { font-size: var(--text-lead); }
-.essay-list .pub-card--published p { font-size: var(--text-small); }
+.essay-list .pub-card--published h3 { font-size: var(--text-lg); }
+.essay-list .pub-card--published p { font-size: var(--text-sm); }
 
 .essay-list a.pub-card--published:hover {
   margin: 0;
