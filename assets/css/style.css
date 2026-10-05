@@ -10,7 +10,6 @@
   --ink: #17171a;
   --forest: #2f4f3f;
   --muted: #5b5b58;
-  --faint: #8e8d87;   /* light grey for kicker labels */
   --border: #dcdad2;
   --surface: #f2f1ec;
   --bg: #fbfbf9;
@@ -1356,5 +1355,5 @@ em.accent {
   font-weight: var(--weight-regular);
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);  /* same grey as the essay count */
 }
