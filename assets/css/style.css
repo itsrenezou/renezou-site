@@ -968,11 +968,9 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   padding: 18px 16px;
 }
 
-.list-outro {
+.page-intro {
   max-width: var(--content-max);
-  margin: 26px 0 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
+  margin: -14px 0 32px;   /* sits close under the lede */
   font-size: var(--text-sm);
   line-height: 1.65;
   color: var(--muted);
@@ -1336,7 +1334,7 @@ em.accent {
 }
 
 /* Closing mark — the Eklipse eclipse symbol, small and quiet, under the
-   list-outro note. Muted via opacity rather than a filter so it stays the
+   essay list. Muted via opacity rather than a filter so it stays the
    real brand mark, just de-emphasized to sit below the reading content. */
 .section-mark {
   display: block;

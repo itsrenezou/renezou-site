@@ -133,12 +133,10 @@
 
       function renderList() {
         const list = document.getElementById("essay-list");
-        const outro = document.getElementById("list-outro");
         const filtered = active === "All" ? essays : essays.filter((e) => e.category === active);
         renderIndexLine(filtered.length);
         if (!filtered.length) {
           list.innerHTML = `<p style="color:var(--muted); font-size:var(--text-sm); padding:24px 4px; border-top:1px solid var(--border);">No essays in “${active}” yet.</p>`;
-          if (outro) outro.hidden = true;
           return;
         }
         const inProgress = filtered.filter((e) => !e.hasDraft);
@@ -149,7 +147,6 @@
             ${pubGroup("Published", published, "pub-grid--published", "pub-group--published")}
           </div>
         `;
-        if (outro) outro.hidden = false;
       }
 
       function renderFilters() {
