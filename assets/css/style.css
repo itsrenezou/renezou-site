@@ -58,7 +58,7 @@
   --tracking-label: 0.1em;
   --tracking-tight: 0.02em;
 
-  --sidebar-w: 320px;
+  --sidebar-w: 402px;
   --avatar-size: 58px;
   --identity-gap: 14px;
   --content-max: 700px;
@@ -108,14 +108,14 @@ button {
   display: flex;
   align-items: flex-start;
   min-height: 100vh;
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .sidebar {
   width: var(--sidebar-w);
   flex: 0 0 var(--sidebar-w);
-  padding: 40px 30px 40px 34px;
+  padding: 40px 34px 40px 37px;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -386,7 +386,7 @@ nav.primary-nav a .sub { font-size: var(--text-xs); color: var(--muted); font-we
 main {
   flex: 1;
   min-width: 0;
-  padding: 56px 48px 120px;
+  padding: 36px 48px 120px;
 }
 
 .page-header { margin-bottom: 8px; }
@@ -1354,4 +1354,68 @@ em.accent {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);  /* same grey as the essay count */
+}
+
+/* =========================================================
+   Mock-up pass (Oct 2026): portrait card + Bio button in the
+   sidebar, In Transit mark beside the Writing title.
+   ========================================================= */
+
+/* Sidebar identity: tall portrait card on the left; name, mono lines and
+   the Bio pill stacked on the right, top-aligned with the photo. */
+.identity-block {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+}
+.portrait {
+  width: 140px;
+  height: 207px;
+  flex: none;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 18px;
+  background: var(--surface);
+}
+.identity-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.identity-block .identity-name { padding-left: 0; line-height: 1.2; }
+.bio-button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 7px 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  color: var(--ink);
+  background: var(--bg);
+  transition: background 180ms ease, border-color 180ms ease;
+}
+.bio-button:hover { background: #ffffff; border-color: var(--forest); color: var(--forest); }
+.bio-button:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+
+/* Sidebar bio: smaller and tighter, set across the wider column. */
+.bio { font-size: var(--text-xs); line-height: 1.45; }
+
+/* Writing title row: In Transit mark beside a larger title. */
+.page-title-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 40px;
+}
+.title-mark { width: 72px; height: auto; flex: none; }
+.page-title--mark { font-size: var(--text-2xl); margin: 0; line-height: 1.1; }
+.page-title-row + * { margin-top: 0; }
+.page-header:has(.page-title-row) + .lede { margin-top: 34px; margin-bottom: 48px; }
+.page-header:has(.page-title-row) ~ .page-intro { margin-top: -24px; margin-bottom: 48px; }
+
+@media (max-width: 560px) {
+  .portrait { width: 112px; height: 166px; }
+  .title-mark { width: 56px; }
+  .page-title-row { gap: 18px; margin-top: 28px; }
 }

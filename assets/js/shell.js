@@ -34,21 +34,16 @@
 
   const sidebarHtml = `
     <div class="identity-block">
-      <div class="identity-name">${CFG.name}</div>
-      <div class="identity-row">
-        <div class="avatar-col">
-          <img class="avatar" src="assets/img/avatar.jpg" alt="${CFG.name}" />
-          <div class="avatar-accents" aria-hidden="true">
-            <span class="accent-bar accent-bar--a"></span>
-            <span class="accent-bar accent-bar--b"></span>
-            <span class="accent-bar accent-bar--c"></span>
-          </div>
-        </div>
+      <img class="portrait" src="assets/img/portrait.jpg" alt="Polar bear on sea ice" />
+      <div class="identity-col">
+        <div class="identity-name">${CFG.name}</div>
         <div class="identity-lines">
           <div><span class="label">Founder</span><a class="underline-link" href="work.html">Eklipse</a> · systems for founders</div>
           <div><span class="label">Category</span>strategic infrastructure</div>
           <div><span class="label">Investor</span>pre-seed, deep tech</div>
         </div>
+        <!-- Links to Work & track record for now; planned to become a full-bio pop-up. -->
+        <a class="bio-button" href="work.html">Bio</a>
       </div>
     </div>
 
