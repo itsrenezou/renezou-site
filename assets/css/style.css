@@ -1095,6 +1095,19 @@ nav.primary-nav a.active:hover {
 /* Work page closing note: a divider in place of the heading, then the
    paragraph set larger in the serif, and the inbox link styled like the
    sidebar's "Currently building" line (lime dot, mono, thin underline). */
+/* Large bio photo: 3:2 frame across the content column. Empty, it shows
+   as a plain placeholder card; an <img> inside fills it edge to edge. */
+.bio-photo {
+  margin: 4px 0 24px;
+  width: 100%;
+  max-width: var(--content-max);
+  aspect-ratio: 3 / 2;
+  border-radius: 18px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.bio-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 .bio-block p {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
