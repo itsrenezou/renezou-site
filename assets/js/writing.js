@@ -140,7 +140,11 @@
           return;
         }
         const inProgress = filtered.filter((e) => !e.hasDraft);
-        const published = filtered.filter((e) => e.hasDraft);
+        // Published: newest first, so the latest piece always leads the list.
+        // Same-month ties keep their 'order'.
+        const published = filtered
+          .filter((e) => e.hasDraft)
+          .sort((a, b) => (b.date || "").localeCompare(a.date || "") || a.order - b.order);
         list.innerHTML = `
           <div class="pub-groups">
             ${pubGroup("In the works", inProgress, "pub-grid--progress", "pub-group--progress")}
