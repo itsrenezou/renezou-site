@@ -1225,6 +1225,32 @@ em.accent {
   .essay-body .stat-row > div:nth-child(3) { grid-area: outcome; }
   .essay-body .stat-row > div:nth-child(4) { grid-area: time; text-align: left; }
 }
+/* 3-column comparison tables (e.g. founder types: who / capital / ambition) */
+.essay-body .stat-table.cols-3 .stat-row {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr) minmax(0, 1.3fr);
+}
+.essay-body .stat-table.cols-3 .stat-row:not(:first-child) > div:nth-child(1) {
+  font-family: inherit;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: var(--ink);
+}
+.essay-body .stat-table.cols-3 .stat-row:not(:first-child) > div:nth-child(2) {
+  font-weight: inherit;
+  color: inherit;
+}
+.essay-body .stat-table.cols-3 .stat-row:not(:first-child) > div:nth-child(1) strong { color: var(--forest); }
+@media (max-width: 560px) {
+  .essay-body .stat-table.cols-3 .stat-row {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    row-gap: 4px;
+  }
+  .essay-body .stat-table.cols-3 .stat-row > div { grid-area: auto; }
+  .essay-body .stat-table.cols-3 .stat-row:not(:first-child) > div:nth-child(2)::before { content: "Capital — "; color: var(--muted); }
+  .essay-body .stat-table.cols-3 .stat-row:not(:first-child) > div:nth-child(3)::before { content: "Ambition — "; font-style: normal; color: var(--muted); }
+}
+
 /* ---------- Publication cadence: in-progress (grey) vs published (white) ----------
    Reuses the existing .essay-card / .tag / .locked "coming soon" styling —
    only adds the grid grouping and grey/white card treatment on top, so every

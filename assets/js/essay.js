@@ -18,7 +18,7 @@
         const rows = block.rows
           .map((r) => `<div class="stat-row">${r.map((c) => `<div>${c}</div>`).join("")}</div>`)
           .join("");
-        return `<div class="stat-table">${head}${rows}</div>`;
+        return `<div class="stat-table cols-${block.headers.length}">${head}${rows}</div>`;
       }
       case "p":
       default:
