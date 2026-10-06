@@ -435,6 +435,21 @@
       "body": [],
       "type": "Essay",
       "date": "2026-11"
+    },
+    {
+      "id": "incubation-of-the-incubators",
+      "order": 6,
+      "title": "The Incubation of the Incubators",
+      "category": "Networks",
+      "status": "progress",
+      "hasDraft": false,
+      "wordCountTarget": 0,
+      "teaser": "What were the early days like at Y Combinator, Techstars and Station F? What incubated the incubators?",
+      "cadenceTeaser": "What were the early days like at Y Combinator, Techstars and Station F? What incubated the incubators?",
+      "dek": "What were the early days like at Y Combinator, Techstars and Station F? What incubated the incubators?",
+      "body": [],
+      "type": "Essay",
+      "date": "2026-11"
     }
   ]
 }
