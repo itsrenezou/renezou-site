@@ -8,22 +8,18 @@
       "category": "Entrepreneurship",
       "status": "live",
       "hasDraft": true,
-      "wordCountTarget": 2500,
+      "wordCountTarget": 2200,
       "teaser": "Everyone wants to be a founder. But what actually makes you one? Being a founder isn't registering a company, building a product in stealth, or becoming your own boss. I think the answer lies somewhere between ownership, agency and legacy: what you choose to build, why it has to be yours, and what you hope remains when you're gone.",
       "cadenceTeaser": "What makes someone a founder beyond registering a company or starting a project? How I discovered founderhood.",
-      "dek": "Everyone wants to be a founder. But what actually makes you one?",
+      "dek": "Everyone wants to be a founder. But what actually makes you one? How I discovered founderhood.",
       "body": [
         {
-          "type": "h2",
-          "text": "I. What does it mean to be a founder?"
+          "type": "p",
+          "text": "Earlier this year, I picked up <strong><a class=\"underline-link\" target=\"_blank\" rel=\"noopener\" href=\"https://www.goodreads.com/en/book/show/98233.Founders_at_Work\"><em>Founders at Work</em></a>,</strong> by Y Combinator co-founder Jessica Livingston, and it sent me back to a question I didn’t know I was looking for an answer to: <strong>what does it mean to be a founder?</strong> How do you identify them? Is it by the work, the vision, the lifestyle or the legacy? Somewhere along the way, I not only realized what being a founder meant – at least to me – but why I had finally chosen to become one."
         },
         {
           "type": "p",
-          "text": "Earlier this year, I picked up <strong><a class=\"underline-link\" target=\"_blank\" rel=\"noopener\" href=\"https://www.goodreads.com/en/book/show/98233.Founders_at_Work\"><em>Founders at Work</em></a>,</strong> by Y Combinator co-founder Jessica Livingston, and it sent me back to a question I didn’t know I was looking for an answer to: <strong>what does it actually mean to be a founder?</strong> How do you identify them? Is it by <strong>the work, the vision, the lifestyle or the legacy?</strong> Somewhere along the way, I not only realized what being a founder meant – at least to me – but why I had finally chosen to become one."
-        },
-        {
-          "type": "p",
-          "text": "<strong>Everyone wants to be a founder. But what actually makes you one?</strong> Being a founder really isn’t as simple as registering a company or becoming your own boss. Anyone who lives in a capitalist society can do that. The better question – I think – is the relationship you have with <strong>founderhood.</strong> Perhaps, I made this word up. But I genuinely believe it is as important of a force to examine as parenthood, adulthood, or neighborhood."
+          "text": "Being a founder really isn’t as simple as registering a company or becoming your own boss. Anyone who lives in a capitalist society can do that. The better question – I think – is the relationship you have with <strong>founderhood.</strong> Perhaps, I made this word up. But I genuinely believe it is as important of a force to examine as parenthood, adulthood, or neighborhood."
         },
         {
           "type": "p",
@@ -31,15 +27,15 @@
         },
         {
           "type": "h2",
-          "text": "II. Is it what you do?"
+          "text": "Is it what you do?"
         },
         {
           "type": "p",
-          "text": "Some people go through the motions of being a founder. They normally start by buying a domain, designing a logo or registering the company – to signal serious intention. These are outward facing motions that establish the legitimacy of what someone is doing. It is <strong>ownership</strong> in a sense, because you technically <em>own</em> these assets. However, you also begin to start <em>owning</em> the responsibility of putting these assets to work."
+          "text": "Some people go through the motions of being a founder. They normally start by buying a domain, designing a logo or registering the company – to signal serious intention. These are outward facing motions that establish the legitimacy of what someone is doing. It is ownership in a sense, because you technically <em>own</em> these assets. However, you also begin to start <em>owning</em> the responsibility of putting these assets to work."
         },
         {
           "type": "p",
-          "text": "Moving into the ‘day-to-day’, founders may start introducing themselves as the brains behind the operations, from initial concept to business management. The more serious ones will go through motions of planning, hiring, delegating to team members and interviewing users or approaching potential clients to secure new sales contracts. This is what I believe, separates a “real founder” from say, a “fake founder”."
+          "text": "Moving into the ‘day-to-day’, founders may start introducing themselves as the brains behind the operations. The more serious ones will go through motions of planning, hiring, delegating to team members and interviewing users or approaching potential clients to secure new sales contracts. This is what I believe, separates a “real founder” from say, a “fake founder”. A real founder owns everything, from initial concept to business management."
         },
         {
           "type": "p",
@@ -51,47 +47,47 @@
         },
         {
           "type": "p",
-          "text": "Sometimes people talk about how founders are the ones who must make the decisions, especially the tough ones at 1am or the ones that leave your feet in the air, under pressure to respond in a high-stakes room. They are the ones doing the negotiation, managing stakeholders and moving the conversation forward. This indeed requires a certain level of judgement and intuition that AI can’t replace."
+          "text": "Sometimes people talk about how founders are the ones who make the decisions, especially the tough ones at 1am or the ones that leave your feet up in the air. They are the ones doing the negotiation, managing stakeholders in high-stake rooms and moving the conversation forward. This indeed requires a certain level of judgement and intuition that AI can’t replace."
         },
         {
           "type": "p",
-          "text": "An AI agent may be able to schedule a coffee chat on your behalf, take meeting notes and predict what you may want to say in a follow-up email with better actionable steps you could’ve jotted down yourself, but the limits are often defined by organization capabilities and predictability. AI doesn’t come up with ideas or solutions, the founder does."
+          "text": "An AI agent may be able to schedule a coffee chat on your behalf, take meeting notes and predict what you may want to say in a follow-up email with better next steps you could’ve jotted down yourself, but the limits are often defined by organization capabilities and predictability. AI doesn’t come up with ideas or solutions, the founder does."
         },
         {
           "type": "p",
-          "text": "When faced with fast-changing scenarios or deciding the timing or tone of a response, an AI agent will act with far less agency and bandwidth for a successful outcome. Arguably, the founder needs to be the pacesetter, based on where they think the company is heading. The decisions they make can’t be outsourced but need to be found from within themselves. Oftentimes, these decisions reflect a founder’s own personal values or their personal understanding of a company’s vision, mission or purpose."
+          "text": "When faced with fast-changing scenarios or deciding the timing or tone of a particular response, an AI agent will act with far less bandwidth for a successful outcome. Arguably, the founder needs to be the pacesetter, based on where they think the company is heading. The decisions they make can’t be outsourced but need to be found from within themselves. Oftentimes, these decisions reflect a founder’s own personal values or their personal understanding of a company’s vision, mission or purpose."
         },
         {
           "type": "p",
-          "text": "So if tasks can increasingly be delegated but judgment cannot, perhaps founderhood has less to do with doing than with owning the direction. In that case, does being a founder mean you’re the one who owns the vision?"
+          "text": "If tasks can increasingly be delegated but judgment cannot, perhaps <strong>founderhood has less to do with <em>doing</em> than with <em>owning</em> the overall direction.</strong> In that case, does being a founder mean you’re the one who owns the vision?"
         },
         {
           "type": "h2",
-          "text": "III. Is it the vision?"
+          "text": "Is it the vision?"
         },
         {
           "type": "p",
-          "text": "Many times, founders are rabble-rousers coming from outside an industry. These are the ones that typically make it on the Forbes 30 under 30 list, which typically pre-selects based on the size and scale of the business, originality or inventiveness of the idea, impact and future potential. PR-gimmick or not, it is an aspirational shorthand for people to announce, “they are doing something big”. Whatever people think, these founders have successfully sold the idea to a Forbes editor that “they have a vision” for the world, one that is distinct and has real momentum behind it."
+          "text": "Many times, founders are rabble-rousers coming from outside an industry. These are the ones that typically make it onto Forbes 30 under 30, which typically pre-selects based on the size and scale of the business, originality of the idea, impact or future potential. PR-gimmick or not, it is an aspirational shorthand for people to announce, “they are doing something big”. Whatever people think, these founders have successfully sold the idea to a Forbes editor that “they have a vision” for the world, one that is distinct and has some real momentum behind or ahead of it."
         },
         {
           "type": "p",
-          "text": "A lot of successful founders we hear about are referred to as “industry trailblazers”. We talk about them in a way where we presume, they have an interest in contributing to meaningful changes to a system. They often do so by achieving one of three things: i. creating a new cross-industry category, ii. applying a new model to an old problem, or iii. scaling something much faster than market incumbents."
+          "text": "A lot of successful founders we hear about are referred to as “industry trailblazers”. We talk about them in a way where we at least assume, to a certain degree, they have an interest in making meaningful changes to a system. They often do so by achieving one of three things: i. creating a new cross-industry category, ii. applying a new model to an old problem, or iii. scaling something much faster than existing market incumbents."
         },
         {
           "type": "p",
-          "text": "Not all innovation is <em>technological</em>, sometimes innovation is <em>operational</em>. That said, I would argue that a founder’s interpretation of the world or the problem at hand, often contributes to better “operational execution”. Indeed, plenty of excellent founders win by executing unusually better than others in an existing market with better product, distribution, customer insight, or just better timing in general."
+          "text": "Not all innovation is <em>technological</em>, sometimes innovation is <em>operational</em>. That said, I would argue that a founder’s interpretation of the world or the problem at hand, often contributes to better “operational execution”. Indeed, plenty of excellent founders win by executing unusually better than others in an existing market with better product, distribution, insights or simply better timing."
         },
         {
           "type": "p",
-          "text": "Being on an industry “list” doesn’t necessarily validate someone will succeed or fail to create positive impact through their new venture (oftentimes, the contrary holds). However, the scale of it often matters, as they have successfully sold an idea or vision that has achieved external validation: from major customers, credible investors, respected partners. <strong>With industry adoption, awards and publications written on them, a founder cements the validity of their vision and ingredients that will inevitably shape their legacy.</strong>"
+          "text": "Being on an industry list doesn’t necessarily validate someone will succeed or fail, or create positive impact through their new venture (oftentimes, the contrary holds). However, the scale of it often matters, as they have successfully sold an idea or vision that has achieved external validation: from major customers, credible investors, respected partners. With industry adoption, awards and publications, a founder cements the validity of their vision and ingredients that will inevitably shape their legacy."
         },
         {
           "type": "p",
-          "text": "Many people have an idea, but not everyone can execute the idea successfully. It is not easy to change industry norms or capture market share from incumbents, therefore someone normally needs to be driven by their vision or purpose, and ultimately the mark they want to leave behind to become a startup founder."
+          "text": "Many people have an idea, but not everyone can execute the idea successfully. Simply put, it is not easy to change industry norms overnight or capture market share from large industry players, therefore someone normally needs to be driven by their vision or purpose to become a founder, especially a start-up founder."
         },
         {
           "type": "pull",
-          "text": "With vision, ownership becomes not mere ownership of the company, but of the outcome."
+          "text": "With vision, ownership becomes not mere ownership of the company, but of the outcome, and ultimately the mark they want to leave behind."
         },
         {
           "type": "p",
@@ -99,15 +95,23 @@
         },
         {
           "type": "h2",
-          "text": "IV. Is it the lifestyle?"
+          "text": "Is it the lifestyle?"
         },
         {
           "type": "p",
-          "text": "A question I’ve been pondering for the past few months is what distinguishes a startup founder from other kinds of founders — small business owners, content creators and lifestyle entrepreneurs, or people building on their family business. At first, I wondered whether it was the number of pivots, the magnitude or freshness of the idea, or simply the amount of uncertainty involved. But I think there’s a cleaner distinction<strong>: the shape of capital and ambition</strong>. There’s a difference between running a small café in your local neighbourhood or accounting practice for a roster of clients and starting something that you think will disrupt an entire industry. Start-ups are grease to the wheels of the real economy. The backbone of innovation. As such, they require different models of funding and risk tolerance."
+          "text": "A question I’ve been pondering for the past few months is what distinguishes a start-up founder from other kinds of founders — small business owners, content creators and lifestyle entrepreneurs, or people building on their family business. At first, I wondered whether it was the number of pivots, freshness of the idea, or simply the amount of uncertainty involved. But I think there’s a cleaner distinction<strong>: the shape of capital and ambition</strong>. There’s a difference between running a small café in your local neighbourhood and accounting practice for a roster of clients and starting a business that you think will disrupt an entire industry."
         },
         {
           "type": "p",
-          "text": "Each type of founder is building toward something slightly different. For instance, a small-business owner builds a company that provides livelihood and independence. A lifestyle entrepreneur builds a company partly to serve their lifestyle. A family-business founder builds an institution intended to outlive them and remain under family or community stewardship. Meanwhile, a startup founder attempts to build an institution that can eventually become much bigger than them. They are not operating on a well-known playbook, and the control they have to give up almost becomes inevitable."
+          "text": "Each type of founder is building toward something slightly different. For instance, a small-business owner builds a company that provides livelihood and independence. A lifestyle entrepreneur builds a company partly to serve their lifestyle. Small businesses serve as an important part of local economies, and founders of small businesses often have an outsized impact on their local communities. Meanwhile, influencers could extend their reach from niche groups to global communities."
+        },
+        {
+          "type": "p",
+          "text": "A family-business founder builds an institution intended to outlive them and remain under family or community stewardship. Meanwhile, a startup founder attempts to build an institution that can eventually become much bigger than them. They are not operating on a well-known playbook, and the control they have to give up almost becomes inevitable."
+        },
+        {
+          "type": "p",
+          "text": "They may all be “founders”, and from the outside they can share the same founder vibe or aesthetic. But the underlying reality can be very different: what the business is designed to do, what capital it needs, what risks it takes and what the founder is ultimately trying to create."
         },
         {
           "type": "table",
@@ -123,12 +127,12 @@
               "Build something profitable, durable and independent."
             ],
             [
-              "Content Creator / Lifestyle Entrepreneur",
+              "Lifestyle Entrepreneur",
               "Typically, low-capital and revenue-funded; the individual is often the core asset.",
               "Maximize autonomy, income, audience and/or lifestyle."
             ],
             [
-              "Family Business Founder / Successor",
+              "Family Business Founder",
               "Patient and concentrated, often generational.",
               "Preserve, compound and pass on an institution to the next generation."
             ],
@@ -141,39 +145,23 @@
         },
         {
           "type": "p",
-          "text": "They may all be “founders”, and from the outside they can share the same founder vibe or aesthetic. But the underlying reality can be very different: what the business is designed to do, what capital it needs, what risks it takes and what the founder is ultimately trying to create."
+          "text": "The important distinction isn’t that one form of ambition is inherently bigger or better. A family business can become a multibillion-dollar company; a creator can reach hundreds of millions of people. It is the shape of the ambition, the intended trajectory and the relationship to scale that differ. Start-ups are grease to the wheels of the real economy. The backbone of innovation. As such, they require different models of funding and risk tolerance."
         },
         {
           "type": "p",
-          "text": "The important distinction isn’t that one form of ambition is inherently bigger or better. A family business can become a multibillion-dollar company; a creator can reach hundreds of millions of people. It is the shape of the ambition, the intended trajectory and the relationship to scale that differ."
-        },
-        {
-          "type": "p",
-          "text": "What is worth separating, then, is founder lifestyle from founder legacy. Lifestyle is the part a founder experiences directly: the circles they move in, the decisions they get to make, the freedom (and burden) of shaping their own days. Legacy is what travels outward from the company: the customers it changes, the jobs it creates, the markets it enters, the systems it alters and, eventually, what remains after the founder is no longer at the centre of it."
-        },
-        {
-          "type": "p",
-          "text": "Most people mistake startup founders for wanting <em>control over people</em>, but I think they simply want <strong>agency to shape what gets created</strong>. That is the other irony of it, the more successful a startup becomes, the more a founder will have to give up control. If the company is going to become larger than the founder, it cannot remain entirely theirs."
+          "text": "Most people mistake startup founders for wanting <em>control over people</em>, but I think they simply want agency to shape what gets created. That is the other irony of it, the more successful a startup becomes, the more a founder will have to give up control. If the company is going to become larger than the founder, it cannot remain entirely theirs."
         },
         {
           "type": "h2",
-          "text": "V. Is it the legacy?"
+          "text": "Is it the legacy?"
         },
         {
           "type": "p",
-          "text": "If lifestyle is what the founder gets to experience, legacy is what the company leaves behind. For a startup founder, that legacy is tied to a particular kind of ambition: trying to build something that can grow beyond the founder’s own time, relationships and direct control. That brings me back to the idea of search — not the search for a job, but the search for the biggest version of a problem you are willing to spend years solving."
+          "text": "What is worth separating is founder lifestyle from founder legacy. Lifestyle is the part a founder experiences directly, whereas legacy is what travels outward: from the company to the customers it changes, the jobs it creates, the markets it enters, the systems it alters and, eventually, what remains after the founder is no longer at the centre of it."
         },
         {
           "type": "p",
-          "text": "Often, a startup founder is pulling resources forward to build something that does not yet exist at the scale they imagine. They are effectively saying: “I want to build something much larger than the resources I currently control,” often inside systems that are already deeply entrenched. That is why venture capital fits some startup models so naturally: it is a financial structure designed to fund high uncertainty in exchange for the possibility of nonlinear growth. When the ambition is institutional in scale, institutional capital can become one of the tools used to pursue it."
-        },
-        {
-          "type": "p",
-          "text": "This does not mean small businesses are easy or startups are inherently more ambitious. The uncertainty is simply different. A small business may be proving that it can operate an established model unusually well in a particular market. A startup is often still searching for the repeatable, scalable model itself, while trying to survive long enough to find it. One is not more legitimate than the other; they are different games with different relationships to risk, capital and scale."
-        },
-        {
-          "type": "p",
-          "text": "That is why the founder’s relationship with the problem matters so much. Maybe what attracts founders is not control itself, but agency: the ability to bring something into existence that otherwise would not exist. The startup founder may be one of the more extreme expressions of that impulse, accepting an eventual loss of control in exchange for increasing the magnitude of what can be created for their customers, employees, investors, and, eventually, the institution itself. In that sense, <strong>legacy is consequence: the part of what you built that continues to matter beyond your direct involvement.</strong>"
+          "text": "If lifestyle is what the founder gets to experience, legacy is what the company leaves behind. For a startup founder, that legacy is tied to a particular kind of ambition: trying to build something that can grow beyond the founder’s own time, relationships and direct control. That brings me back to the idea of “search” — not the search for a job, but the search for the biggest version of a problem you are willing to spend years solving."
         },
         {
           "type": "p",
@@ -184,12 +172,20 @@
           "text": "The deeper question is why some of us feel compelled to build something of our own in the first place."
         },
         {
+          "type": "p",
+          "text": "I think this relates to why the founder’s relationship with the problem matters so much. Maybe what attracts founders is not control itself, but agency: the ability to bring something into existence that otherwise would not exist. The startup founder may be one of the more extreme expressions of that impulse, accepting an eventual loss of control in exchange for increasing the magnitude of what can be created for their customers, employees, investors, and, eventually, the institution itself."
+        },
+        {
+          "type": "p",
+          "text": "In that sense, <strong>legacy is consequence: the part of what you built that continues to matter beyond your direct involvement.</strong>"
+        },
+        {
           "type": "h2",
           "text": "On Ambitious Founders"
         },
         {
           "type": "p",
-          "text": "Last year, I read <a class=\"underline-link\" target=\"_blank\" rel=\"noopener\" href=\"https://www.goodreads.com/en/book/show/221755023-the-experimentation-machine\">Experimentation Machine</a>, which said AI isn’t going to replace founders, but founders who use AI are going to replace founders who don’t. AI may change the founder’s toolkit, but it does not remove the need for someone to decide what is worth building, why it matters and the trade-offs during its building process. In this book, Jeff Bussgang makes the case for more founders."
+          "text": "Last year, I went to a talk by Jeff Bussgang, where he makes the case for more founders in the Age of AI. In <a class=\"underline-link\" target=\"_blank\" rel=\"noopener\" href=\"https://www.goodreads.com/en/book/show/221755023-the-experimentation-machine\">Experimentation Machine</a>, Bussgang argues AI isn’t going to replace founders, but founders who use AI are going to replace founders who don’t. AI may change the founder’s toolkit, but it does not remove the need for someone to decide what is worth building, why it matters and the trade-offs during its building process."
         },
         {
           "type": "p",
@@ -197,11 +193,27 @@
         },
         {
           "type": "p",
-          "text": "Founderhood is a relationship a founder has with capital and ambition. This is often underpinned by one’s understanding of ownership, agency and legacy: what you choose to build, why it has to be yours, and what you hope remains when you're gone. I spent my entire twenties in search of a dream job. It wasn't until the tail end of the decade that I realized the job didn't exist, and I had to create it for myself."
+          "text": "If there’s one thing I’ve learned this year, it’s that founderhood is a relationship a founder has with capital and ambition. This is often underpinned by one’s understanding of ownership, agency and legacy: what you choose to build, why it has to be yours, and what you hope remains when you're gone."
         },
         {
           "type": "p",
-          "text": "I was looking for a role inside someone else’s system when, really, I wanted the agency to help shape the system itself."
+          "text": "I spent my entire twenties in search of a dream job. It wasn't until the tail end of the decade that I realized the job didn't exist, and I had to create it for myself. I was looking for a role inside someone else’s system when, really, I wanted the agency to help shape the system itself. That’s the moment when I found founderhood."
+        },
+        {
+          "type": "p",
+          "text": "If I’m honest, I am less motivated by the idea that I have one singular problem in the world that only I am meant to solve. I am more drawn to people who are already solving hard problems — and to helping them solve those problems better, faster and at a scale they could not reach on their own. I think I am motivated less by my own purpose than by other people’s: by being useful to what they are already trying to build. That, in itself, may be my purpose."
+        },
+        {
+          "type": "p",
+          "text": "I decided that I didn’t want to be a founder of a boutique consultancy with &lt;$5M ARR, I wanted to build a product that could change people’s relationship to founderhood. That, in the end, is my answer to the question every founder gets asked: why this?"
+        },
+        {
+          "type": "p",
+          "text": "The relationship I have with founderhood is not defined by title or aesthetics, but increasingly by my desire for ownership, agency and legacy."
+        },
+        {
+          "type": "h2",
+          "text": "Notes"
         },
         {
           "type": "p",
@@ -214,14 +226,6 @@
         {
           "type": "p",
           "text": "What is <strong>legacy:</strong> I define legacy as leaving an impact on people, places and ecosystems, because of something you’ve built. Legacy can be visible in a company, a product, an institution, but it can also be embedded in the people who learned from it, the standards it changed or the possibilities it made easier for someone else to imagine. This is where founderhood starts to overlap with purpose."
-        },
-        {
-          "type": "p",
-          "text": "If I’m honest, I am less motivated by the idea that I have one singular problem in the world that only I am meant to solve. I am more drawn to people who are already solving hard problems — and to helping them solve those problems better, faster and at a scale they could not reach on their own. I think I am motivated less by my own purpose than by other people’s: by being useful to what they are already trying to build. That, in itself, may be my purpose."
-        },
-        {
-          "type": "p",
-          "text": "I decided that I didn’t want to be a founder of a boutique consultancy with &lt;$5M ARR, I wanted to build a product that could change people’s relationship to founderhood. That, in the end, is my answer to the question every founder gets asked: why this?"
         }
       ],
       "type": "Essay",
