@@ -676,6 +676,8 @@ main {
   color: var(--muted);
   margin: -6px 0 14px;
 }
+/* Same tagline placed directly under a page title (Work page). */
+.page-tagline { margin: 12px 0 0; }
 
 /* ---------- Stack page ---------- */
 
