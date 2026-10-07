@@ -34,7 +34,7 @@
 
   const sidebarHtml = `
     <div class="identity-block">
-      <img class="portrait" src="assets/img/portrait.jpg" alt="Polar bear on sea ice" />
+      <img class="portrait" src="assets/img/portrait.jpg" alt="Portrait of Rene Zou" />
       <div class="identity-col">
         <div class="identity-name">${CFG.name}</div>
         <div class="identity-lines">
