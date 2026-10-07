@@ -1600,3 +1600,21 @@ em.accent {
   .page-title-logo-row { margin-top: 34px; gap: 16px; }
   .title-logo { width: 48px; height: 48px; border-radius: 11px; }
 }
+
+/* Work page: quiet caption under the photo pair, with the Eklipse line mark. */
+.work-block .photo-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: -12px 0 24px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.photo-caption img { width: 32px; height: auto; flex: none; }
+@media (max-width: 560px) {
+  .work-block .photo-caption { gap: 8px; margin-top: -14px; font-size: 10px; letter-spacing: 0; }
+  .photo-caption img { width: 22px; }
+}
