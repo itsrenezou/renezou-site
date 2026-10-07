@@ -9,7 +9,7 @@
   if (path === "writing") path = "index.html"; // /writing serves a copy of index.html
 
   const NAV = [
-    { href: "index.html", label: "Writing", sub: "5" },
+    { href: "index.html", label: "Writing", sub: "6", subId: "nav-essay-count" },
     { href: "stack.html", label: "Stack", sub: "how I build" },
     { href: "investing.html", label: "Investing", sub: "views" },
   ];
@@ -18,7 +18,7 @@
     return NAV.map((item) => {
       const active = path === item.href ? " active" : "";
       return `<a class="nav-link${active}" href="${item.href}">${item.label}${
-        item.sub ? `<span class="sub">${item.sub}</span>` : ""
+        item.sub ? `<span class="sub"${item.subId ? ` id="${item.subId}"` : ""}>${item.sub}</span>` : ""
       }</a>`;
     }).join("");
   }
@@ -229,4 +229,16 @@
     gtag("js", new Date());
     gtag("config", CFG.gaMeasurementId);
   }
+
+  // Keep the Writing nav count in step with content/essays.json (the same
+  // list the Writing page renders), so it never needs editing by hand.
+  // The number in NAV above is only a fallback if the fetch fails.
+  fetch("content/essays.json")
+    .then((r) => (r.ok ? r.json() : Promise.reject()))
+    .then((data) => {
+      const essays = Array.isArray(data) ? data : data.essays || [];
+      const el = document.getElementById("nav-essay-count");
+      if (el && essays.length) el.textContent = String(essays.length);
+    })
+    .catch(() => {});
 })();
