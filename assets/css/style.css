@@ -1461,6 +1461,12 @@ em.accent {
 .page-title--mark { font-size: var(--text-2xl); margin: 0; line-height: 1.1; }
 .page-title-row + * { margin-top: 0; }
 .page-header:has(.page-title-row) + .lede { margin-top: 34px; margin-bottom: 48px; }
+/* Pages without the title mark (Work, Stack, Investing): same distance
+   from the grey kicker to the title as the In Transit header. */
+.page-kicker + .page-title { margin-top: 47px; line-height: 1.1; }
+@media (max-width: 560px) {
+  .page-kicker + .page-title { margin-top: 34px; }
+}
 
 @media (max-width: 560px) {
   .portrait { width: 112px; height: 166px; }
