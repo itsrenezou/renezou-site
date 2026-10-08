@@ -111,6 +111,9 @@ async function main() {
     const dek = plainText(prop(page, "Dek")?.rich_text || []) || teaser;
     const wordCountTarget = prop(page, "Word Count")?.number || 0;
     const hasDraft = !!prop(page, "Has Draft")?.checkbox;
+    // "Published" (Date property) — the day the essay first went live.
+    // Feeds the RSS pubDate and the date shown on the essay page.
+    const publishedAt = prop(page, "Published")?.date?.start?.slice(0, 10) || undefined;
 
     const body = hasDraft ? await blocksToBody(page.id) : [];
 
@@ -124,6 +127,7 @@ async function main() {
       wordCountTarget,
       teaser,
       dek,
+      publishedAt,
       body,
     });
   }

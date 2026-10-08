@@ -585,6 +585,8 @@ main {
   margin-bottom: 14px;
 }
 .essay-meta-row .read-time { font-size: var(--text-xs); color: var(--muted); }
+.essay-meta-row .pub-date { font-size: var(--text-xs); color: var(--muted); }
+.essay-meta-row .pub-date + .read-time:not(:empty)::before { content: "·"; margin-right: 10px; }
 
 .essay-title {
   font-family: var(--font-serif);

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Rene Zou — Writing</title>
+    <link>https://renezou.com/writing</link>
+    <atom:link href="https://renezou.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Essays by Rene Zou on strategy, founders, and the gap between vision and execution.</description>
+    <language>en-us</language>
+    <managingEditor>rene.zou@eklipses.io (Rene Zou)</managingEditor>
+    <lastBuildDate>Tue, 06 Oct 2026 16:00:00 GMT</lastBuildDate>
+    <item>
+      <title>If You&apos;re a Founder, Read This</title>
+      <link>https://renezou.com/essay?id=founder-read-this</link>
+      <guid isPermaLink="true">https://renezou.com/essay?id=founder-read-this</guid>
+      <pubDate>Tue, 06 Oct 2026 16:00:00 GMT</pubDate>
+      <dc:creator>Rene Zou</dc:creator>
+      <category>Entrepreneurship</category>
+      <description>Everyone wants to be a founder. But what actually makes you one? Being a founder isn&apos;t registering a company, building a product in stealth, or becoming your own boss. I think the answer lies somewhere between ownership, agency and legacy: what you choose to build, why it has to be yours, and what you hope remains when you&apos;re gone.</description>
+    </item>
+    <item>
+      <title>Velocity &gt; Speed</title>
+      <link>https://renezou.com/essay?id=velocity-speed</link>
+      <guid isPermaLink="true">https://renezou.com/essay?id=velocity-speed</guid>
+      <pubDate>Thu, 17 Sep 2026 16:00:00 GMT</pubDate>
+      <dc:creator>Rene Zou</dc:creator>
+      <category>Strategy</category>
+      <description>“Move fast and break things” is passé. In a world where everyone can build faster, speed is no longer the advantage it once was. The founders who win won&apos;t just move fast – they&apos;ll move with velocity: speed with direction.</description>
+    </item>
+  </channel>
+</rss>

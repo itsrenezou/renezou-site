@@ -229,7 +229,8 @@
         }
       ],
       "type": "Essay",
-      "date": "2026-10"
+      "date": "2026-10",
+      "publishedAt": "2026-10-06"
     },
     {
       "id": "velocity-speed",
@@ -296,7 +297,8 @@
         }
       ],
       "type": "Thesis",
-      "date": "2026-09"
+      "date": "2026-09",
+      "publishedAt": "2026-09-17"
     },
     {
       "id": "building-age-of-ai",

@@ -125,3 +125,13 @@ That gets you: edit in Notion → live site updates within a couple of minutes, 
 - **"Work & Track Record"**: reachable by clicking "Eklipse" in the sidebar's Founder line (there's no separate
   top-level nav slot for it in your 3-section diagram, and this mirrors how Diana's site links her "Founder"
   line out to her product) — let me know if you'd rather it be a 4th nav item instead.
+
+## RSS feed (for sharing on X)
+
+`feed.xml` is regenerated on every deploy by `scripts/generate-feed.mjs` and is served at
+`https://renezou.com/feed.xml`. It lists every essay that is `status: "live"` with a draft, newest first.
+
+Each essay's date comes from `publishedAt` (`YYYY-MM-DD`) in `content/essays.json` — the day it first went live.
+That date also shows on the essay page next to the read time. Set it once when you publish and leave it alone on
+later edits, or feed readers and X schedulers will treat the essay as new. In Notion, use a Date property named
+**Published**.

@@ -53,6 +53,19 @@
       document.getElementById("essay-title").textContent = essay.title;
       document.getElementById("essay-dek").textContent = essay.dek || essay.teaser;
 
+      // Original publish date (YYYY-MM-DD). Parsed as UTC and formatted in
+      // UTC so the calendar day never shifts with the reader's timezone.
+      if (essay.publishedAt) {
+        const pub = document.getElementById("essay-pub-date");
+        const d = new Date(`${essay.publishedAt}T00:00:00Z`);
+        pub.setAttribute("datetime", essay.publishedAt);
+        pub.textContent = new Intl.DateTimeFormat("en-US", {
+          month: "short", day: "numeric", year: "numeric", timeZone: "UTC",
+        }).format(d);
+        pub.hidden = false;
+        document.getElementById("og-published").setAttribute("content", essay.publishedAt);
+      }
+
       const words = essay.wordCountTarget || 0;
       const minutes = Math.max(1, Math.round(words / 220));
       document.getElementById("essay-read-time").textContent = words ? `${minutes} min read` : "";

@@ -1,6 +1,17 @@
 {
-  "buildCommand": "node scripts/sync-notion.mjs && node scripts/generate-sitemap.mjs && cp index.html writing.html",
+  "buildCommand": "node scripts/sync-notion.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-feed.mjs && cp index.html writing.html",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        }
+      ]
+    }
+  ]
 }
