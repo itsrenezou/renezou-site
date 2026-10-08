@@ -1,5 +1,5 @@
 {
-  "buildCommand": "node scripts/sync-notion.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-feed.mjs && cp index.html writing.html",
+  "buildCommand": "node scripts/sync-notion.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-feed.mjs && node scripts/generate-essay-pages.mjs && cp index.html writing.html",
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
@@ -12,6 +12,20 @@
           "value": "application/rss+xml; charset=utf-8"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/essay",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/essays/:id",
+      "permanent": true
     }
   ]
 }

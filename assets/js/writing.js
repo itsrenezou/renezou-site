@@ -52,7 +52,7 @@
       ${bottomMeta}
     `;
     if (e.hasDraft) {
-      return `<a class="essay-card pub-card pub-card--published" href="essay.html?id=${e.id}">${inner}</a>`;
+      return `<a class="essay-card pub-card pub-card--published" href="/essays/${e.id}">${inner}</a>`;
     }
     return `<div class="essay-card locked pub-card pub-card--progress">${inner}</div>`;
   }
@@ -88,7 +88,7 @@
           .map(
             (e) => `
           <div class="fb-card">
-            ${e.hasDraft ? `<a href="essay.html?id=${e.id}" class="underline-link">` : ""}
+            ${e.hasDraft ? `<a href="/essays/${e.id}" class="underline-link">` : ""}
             <h3>${e.title}</h3>
             ${e.hasDraft ? `</a>` : ""}
             <p>${e.teaser}</p>

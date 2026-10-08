@@ -53,7 +53,7 @@ function main() {
 
   const itemXml = items
     .map(({ e, when }) => {
-      const url = `${SITE}/essay?id=${e.id}`;
+      const url = `${SITE}/essays/${e.id}`;
       return `    <item>
       <title>${escapeXml(e.title)}</title>
       <link>${escapeXml(url)}</link>

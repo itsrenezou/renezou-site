@@ -20,7 +20,7 @@ function main() {
   const { essays } = JSON.parse(readFileSync("content/essays.json", "utf8"));
   const essayUrls = essays
     .filter((e) => e.hasDraft)
-    .map((e) => `${SITE}/essay?id=${e.id}`);
+    .map((e) => `${SITE}/essays/${e.id}`);
 
   const urls = [...STATIC_PAGES.map((p) => `${SITE}${p}`), ...essayUrls];
 

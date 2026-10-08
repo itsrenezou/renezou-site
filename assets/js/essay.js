@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------
 (function () {
   const params = new URLSearchParams(location.search);
-  const id = params.get("id");
+  const id = document.body.dataset.essayId || params.get("id");
 
   function renderBlock(block, idx) {
     switch (block.type) {
@@ -35,7 +35,7 @@
         return;
       }
 
-      const canonicalUrl = `https://renezou.com/essay?id=${essay.id}`;
+      const canonicalUrl = `https://renezou.com/essays/${essay.id}`;
       const shareTitle = `${essay.title} — Rene Zou`;
       const shareDesc = essay.dek || essay.teaser;
 
@@ -90,7 +90,7 @@
       let targets = [];
       if (headers.length) {
         toc.innerHTML = headers
-          .map((h) => `<a href="#sec-${h.idx}"><span class="tick" aria-hidden="true"></span><span class="k">${h.text}</span></a>`)
+          .map((h) => `<a href="${location.pathname}${location.search}#sec-${h.idx}"><span class="tick" aria-hidden="true"></span><span class="k">${h.text}</span></a>`)
           .join("");
         toc.classList.add("ready");
         links = Array.from(toc.querySelectorAll("a"));
