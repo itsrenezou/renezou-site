@@ -40,8 +40,23 @@
           <h1 class="page-title">Work &amp; Track Record</h1>
           <img class="title-logo" src="assets/img/eklipse-logo-argent.png" alt="Eklipse" width="64" height="64" />
         </div>
-        <div class="story-tagline page-tagline">Global. Strategic. Ambitious.</div>
+        <div class="page-tagline-row">
+          <div class="story-tagline page-tagline">Global. Strategic. Ambitious.</div>
+          <button type="button" class="story-btn" id="our-story-open" aria-haspopup="dialog" aria-controls="our-story">Our Story</button>
+        </div>
       </div>
+
+      <dialog class="story-dialog" id="our-story" aria-labelledby="our-story-title">
+        <button type="button" class="story-dialog-close" id="our-story-close" aria-label="Close">×</button>
+        <div class="work-block">
+          <h2 id="our-story-title"><span class="diamond">◇</span> Our Story</h2>
+          <div class="story-tagline">The Conduit</div>
+          <p>Rene &amp; Matei met at the Conduit in 2023 through a founder friend and hit it off immediately. It was a room full of entrepreneurs with ideas, investors that could fund them, and creatives who could communicate them. A global community of changemakers.</p>
+          <p>Rene thinks in strategy and story. Matei thinks in brand and design. Together, they kept gravitating toward the same kind of person: the innovator with a great idea and not enough momentum.</p>
+          <p>Since then, they've worked on a handful of company makeovers—from school uniforms to industrial equipment. The pattern was always the same. Founders needed clarity, alignment and traction, and they needed it fast.</p>
+          <p>So they built Eklipse, a single system that fuses strategy and design into a clear direction that helps founders move with strategic velocity.</p>
+        </div>
+      </dialog>
 
       <div class="work-block" id="bio" style="margin-top:24px;">
         <figure class="bio-photo bio-photo--pair">
@@ -75,5 +90,16 @@
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/shell.js"></script>
+  <script>
+    (function () {
+      var dlg = document.getElementById("our-story");
+      var openBtn = document.getElementById("our-story-open");
+      if (!dlg || !openBtn || typeof dlg.showModal !== "function") return;
+      openBtn.addEventListener("click", function () { dlg.showModal(); });
+      document.getElementById("our-story-close").addEventListener("click", function () { dlg.close(); });
+      // Click on the dimmed backdrop (outside the panel) closes it.
+      dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    })();
+  </script>
 </body>
 </html>
