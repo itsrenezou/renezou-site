@@ -429,7 +429,7 @@
     },
     {
       "id": "capitals-and-ambitions",
-      "order": 5,
+      "order": 6,
       "title": "Capitals & Ambitions",
       "category": "Capital",
       "status": "progress",
@@ -440,11 +440,11 @@
       "dek": "Go where your ambition feels normal — an exploration of how geography concentrates talent, capital, culture, and ambition.",
       "body": [],
       "type": "Essay",
-      "date": "2026-11"
+      "date": "2026-12"
     },
     {
       "id": "incubation-of-the-incubators",
-      "order": 6,
+      "order": 5,
       "title": "Incubating of Incubators",
       "category": "Networks",
       "status": "progress",
