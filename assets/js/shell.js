@@ -48,7 +48,7 @@
     </div>
 
     <div class="bio-wrap">
-      <p class="bio">I write about the <strong>movement of capital</strong> – financial, intellectual, human – in the AI era — and with <strong>Eklipse</strong>, I build on that thesis directly. Eklipse is strategic infrastructure for ambitious founders: it builds scalable systems that turn founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS — turning a love of <strong>deep tech</strong> into an investing lens of my own. If you can't tell, I love <strong>cities</strong>.</p>
+      <p class="bio">I write about the <strong>movement of capital</strong> – financial, intellectual, human – across time and space in the AI era. Things move, but where they concentrate matters. With <strong>Eklipse</strong>, I build on that directly: strategic infrastructure that turns founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech, industrial tech, infrastructure, and enterprise SaaS, turning a love of <strong>deep tech</strong> into an investing lens of my own. If you can't tell, I love <strong>cities</strong>.</p>
     </div>
 
     <nav class="primary-nav">${navHtml()}</nav>
