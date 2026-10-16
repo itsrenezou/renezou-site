@@ -666,7 +666,7 @@ main {
 .work-block p { margin: 0 0 14px; font-size: var(--text-md); line-height: 1.7; color: var(--ink); }
 .work-block .lead-p { color: var(--muted); }
 
-/* Small tracked-caps kicker under a work-block h2 (e.g. "My Story"), in the
+/* Small tracked-caps kicker under a work-block h2 (e.g. "The Story"), in the
    same mono-metadata voice as tags/essay-meta elsewhere, deliberately not
    using .eyebrow's pill style so it doesn't compete with the page's own
    top eyebrow badge. */
