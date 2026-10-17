@@ -233,7 +233,7 @@ button {
   line-height: 1.65;
 }
 
-.bio strong { color: var(--ink); font-weight: var(--weight-semibold); }
+.bio strong { color: var(--ink); font-weight: var(--weight-semibold); white-space: nowrap; }
 
 nav.primary-nav {
   display: flex;
