@@ -982,9 +982,6 @@ body.spotlight-active .cursor-spotlight { opacity: 1; }
   color: var(--muted);
 }
 
-.list-outro p { margin: 0; }
-.list-outro p + p { margin-top: 12px; }
-
 .page-header-right {
   display: flex;
   align-items: center;
