@@ -48,7 +48,7 @@
     </div>
 
     <div class="bio-wrap">
-      <p class="bio">I write about people who <strong>build</strong> things, and the cities where they concentrate. With <strong>Eklipse</strong>, I build on that thesis directly with strategic infrastructure that turns founders' vision into strategy, and strategy into execution. Alongside that, I track health tech, biotech and industrial tech, turning a love of <strong>deep tech</strong> into an investing lens of my own. If you can't tell, I love <strong>cities</strong>.</p>
+      <p class="bio">I write about people who <strong>build</strong> things, and the cities where they concentrate. With <strong>Eklipse</strong>, I build on that thesis directly with strategic infrastructure that turns founders' vision into strategy, and strategy into execution. Alongside that, I track industrial tech, health tech and biotech, turning a love of <strong>deep tech</strong> into an investing lens of my own. If you can't tell, I love <strong>cities</strong>.</p>
     </div>
 
     <nav class="primary-nav">${navHtml()}</nav>
