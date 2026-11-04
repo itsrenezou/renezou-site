@@ -1703,3 +1703,10 @@ em.accent {
 }
 .title-logo-btn:focus-visible { outline: none; }
 #the-story { width: min(640px, calc(100vw - 32px)); }
+
+/* The Story dialog text: same sans as the bio paragraphs, 30% smaller than the serif lede it replaced (19px -> ~13.3px). */
+#the-story .serif-block p {
+  font-family: var(--font-sans);
+  font-size: calc(var(--text-lg) * 0.7);
+  line-height: 1.7;
+}
