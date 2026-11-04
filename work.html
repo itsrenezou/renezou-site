@@ -42,28 +42,14 @@
         </div>
         <div class="page-tagline-row">
           <div class="story-tagline page-tagline">Global. Strategic. Ambitious.</div>
-          <button type="button" class="story-btn" id="our-story-open" aria-haspopup="dialog" aria-controls="our-story">Our Story</button>
         </div>
       </div>
 
-      <dialog class="story-dialog" id="our-story" aria-labelledby="our-story-title">
-        <button type="button" class="story-dialog-close" id="our-story-close" aria-label="Close">×</button>
-        <div class="work-block">
-          <h2 id="our-story-title"><span class="diamond">◇</span> Our Story</h2>
-          <div class="story-tagline">The Conduit</div>
-          <p>Rene &amp; Matei met at the Conduit in 2023 through a founder friend and hit it off immediately. It was a room full of entrepreneurs with ideas, investors that could fund them, and creatives who could communicate them. A global community of changemakers.</p>
-          <p>Rene thinks in strategy and story. Matei thinks in brand and design. Together, they kept gravitating toward the same kind of person: the innovator with a great idea and not enough momentum.</p>
-          <p>Since then, they've worked on a handful of company makeovers—from school uniforms to industrial equipment. The pattern was always the same. Founders needed clarity, alignment and traction, and they needed it fast.</p>
-          <p>So they built Eklipse, a single system that fuses strategy and design into a clear direction that helps founders move with strategic velocity.</p>
-        </div>
-      </dialog>
-
-      <div class="work-block" id="bio" style="margin-top:24px;">
+       <div class="work-block" id="bio" style="margin-top:24px;">
         <figure class="bio-photo bio-photo--pair">
           <img src="assets/img/bio-photo-1.jpg" alt="Rene Zou seated on a stool in a studio portrait" width="836" height="1258" loading="lazy" />
-          <img src="assets/img/bio-photo-2.jpg" alt="Rene Zou with Eklipse co-founder Matei Vulpe" width="838" height="1260" loading="lazy" />
         </figure>
-        <p class="photo-caption"><img src="assets/img/eklipse-logo-ink.png" alt="" aria-hidden="true" width="32" height="32" /><span>Rene Zou &amp; Matei Vulpe · co-founders, Eklipse</span></p>
+        <p class="photo-caption"><img src="assets/img/eklipse-logo-ink.png" alt="" aria-hidden="true" width="32" height="32" /><span>Rene Zou · co-founder, Eklipse</span></p>
         <p>Rene is a builder, connector and strategist. Over the past decade, she's lived in seven cities and worked across three continents in roles spanning international finance, consulting, and technology. Her focus sits at the intersection of China, EV, geopolitics and ESG: macro research on China's economy, direct management access to major EV brands, and ESG due diligence.</p>
         <p>One thread has stayed constant: working side by side with founders and CEOs to turn big ideas into strategy, story and execution. Most recently, she helped a 30-year-old industrial technology company expand into new global markets. Before then she was at the UN, the Economist, and a run of startups and scale-ups — building on her entrepreneurialism.</p>
         <p>At Eklipse, she brings that experience together with a love of storytelling and systems-building — helping innovators turn vision into frameworks built to scale.</p>
@@ -90,16 +76,5 @@
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/shell.js"></script>
-  <script>
-    (function () {
-      var dlg = document.getElementById("our-story");
-      var openBtn = document.getElementById("our-story-open");
-      if (!dlg || !openBtn || typeof dlg.showModal !== "function") return;
-      openBtn.addEventListener("click", function () { dlg.showModal(); });
-      document.getElementById("our-story-close").addEventListener("click", function () { dlg.close(); });
-      // Click on the dimmed backdrop (outside the panel) closes it.
-      dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
-    })();
-  </script>
 </body>
 </html>
