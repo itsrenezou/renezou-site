@@ -1680,3 +1680,26 @@ em.accent {
 
 /* Bio button (work.html#bio) lands on the page header with the kicker visible. */
 #bio { scroll-margin-top: 48px; }
+
+/* Eklipse logo beside the Work page title opens "The Story" dialog. */
+.title-logo-btn {
+  flex: none;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 14px;
+  cursor: pointer;
+  line-height: 0;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.title-logo-btn .title-logo { display: block; }
+.title-logo-btn:hover,
+.title-logo-btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 3px var(--live),
+    0 0 22px 8px var(--accent-glow),
+    0 0 44px 16px rgba(221, 251, 139, 0.28);
+}
+.title-logo-btn:focus-visible { outline: none; }
+#the-story { width: min(640px, calc(100vw - 32px)); }
