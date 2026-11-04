@@ -42,8 +42,10 @@
           <div><span class="label">Category</span>strategic infrastructure</div>
           <div><span class="label">Investor</span>pre-seed, deep tech</div>
         </div>
-        <!-- Links to Work & Track Record for now; planned to become a full-bio pop-up. -->
-        <a class="bio-button" href="work.html#bio">Bio</a>
+        <div class="bio-buttons">
+          <a class="bio-button" href="work.html#bio">Bio</a>
+          <a class="bio-button" href="https://renezou.substack.com/" target="_blank" rel="noopener">Newsletter</a>
+        </div>
       </div>
     </div>
 
