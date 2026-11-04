@@ -1111,24 +1111,6 @@ nav.primary-nav a.active:hover {
   overflow: hidden;
 }
 .bio-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Work page tagline set on the photo itself, top-left. The photo is a
-   light studio backdrop in both themes, so the ink stays dark on purpose. */
-.bio-photo { position: relative; }
-.bio-photo-tag {
-  position: absolute;
-  top: 22px;
-  left: 24px;
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(20, 20, 18, 0.72);
-  pointer-events: none;
-}
-@media (max-width: 520px) {
-  .bio-photo-tag { top: 14px; left: 14px; font-size: 10px; }
-}
 /* Two portrait photos side by side; each tile is a 2:3 card, so the pair
    reads as one 4:3 block across the column. */
 .bio-photo--pair {
