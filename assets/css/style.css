@@ -1710,3 +1710,5 @@ em.accent {
   font-size: calc(var(--text-lg) * 0.7);
   line-height: 1.7;
 }
+#the-story .serif-block p + p { margin-top: 14px; }
+#the-story .cta { margin-top: 22px; }
