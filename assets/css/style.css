@@ -1677,3 +1677,6 @@ em.accent {
 @media (max-width: 560px) {
   .story-dialog { padding: 26px 20px 12px; }
 }
+
+/* Bio button (work.html#bio) lands on the page header with the kicker visible. */
+#bio { scroll-margin-top: 48px; }
