@@ -40,7 +40,7 @@
         <div class="identity-lines">
           <div><span class="label">Founder</span><a class="underline-link" href="work.html">Eklipse</a> · systems for founders</div>
           <div><span class="label">Category</span>strategic infrastructure</div>
-          <div><span class="label">Investor</span>pre-seed to IPO, deep tech</div>
+          <div><span class="label">Investor</span>deep tech</div>
         </div>
         <div class="bio-buttons">
           <a class="bio-button" href="work.html#bio">Bio</a>
