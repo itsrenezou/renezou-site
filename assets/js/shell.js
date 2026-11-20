@@ -10,7 +10,7 @@
 
   const NAV = [
     { href: "index.html", label: "Writing", sub: "6", subId: "nav-essay-count" },
-    { href: "stack.html", label: "Stack", sub: "how I build" },
+    { href: "stack.html", label: "Building", sub: "how I build" },
     { href: "investing.html", label: "Investing", sub: "views" },
   ];
 
@@ -174,7 +174,7 @@
   const DESTINATIONS = [
     { label: "Writing", sub: "what I think", href: "index.html" },
     { label: "Work & Track Record", sub: "who I am", href: "work.html" },
-    { label: "Stack", sub: "what I build", href: "stack.html" },
+    { label: "Building", sub: "what I build", href: "stack.html" },
     { label: "Investing", sub: "what I back", href: "investing.html" },
   ];
 
